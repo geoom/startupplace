@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="es"> 
+<html lang="<?php echo substr(I18n::$lang, 0, 2); ?>"> 
 <head>
 	<!-- start: Meta -->
 	<meta charset="utf-8">
@@ -56,18 +56,36 @@
 					</a>
 	          		<div class="nav-collapse collapse">
 	            		<ul class="nav">
-	            			<li class="active"><a href="http://www.startupplace.org">Inicio</a></li>
-	              			<li><a href="about.html">Sobre nosotros</a></li>
-	              			<li><a href="ideastartup.html">ideaStartup</a></li>
-							<li class="dropdown">
-	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventos<b class="caret"></b></a>
+		        			<?php if(Request::current()->uri() == "/"){ 
+		        				echo "<li class=\"active\">";
+		        			}else{ echo "<li>";} ?>
+		            			<a href="<?php echo URL::base(); ?>"><?php echo __('HOME')?></a>
+		            		</li>
+		            		<?php if(Request::current()->uri() == "about"){ 
+		        				echo "<li class=\"active\">";
+		        			}else{ echo "<li>";} ?>
+		            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
+		            		</li>
+		            		<?php if(Request::current()->uri() == "ideastartup"){ 
+		        				echo "<li class=\"active\">";
+		        			}else{ echo "<li>";} ?>
+		            			<a href="<?php echo URL::base(); ?>ideastartup"><?php echo __('IDEASTARTUP')?></a>
+		            		</li>
+		            		<?php if(Request::current()->uri() == "events"){ 
+		        				echo "<li class=\"active dropdown\">";
+		        			}else{ echo "<li class=\"dropdown\">";} ?>
+	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
 	                			<ul class="dropdown-menu dropdown-limited">
-	                  				<li><a href="event-accept-challenge.html">
-	                  					<p>STARTUP: Acepta el reto de ser un emprendedor tecnol&oacute;gico</p>
+	                  				<li><a href="<?php echo URL::base(); ?>event01">
+	                  					<p><?php echo __('EVENT01')?></p>
 	                  				</a></li>
 	                			</ul>
 	              			</li>
-	              			<li><a href="contact.html">Contacto</a></li>
+	              			<?php if(Request::current()->uri() == "contact"){ 
+		        				echo "<li class=\"active\">";
+		        			}else{ echo "<li>";} ?>
+	              				<a href="<?php echo URL::base(); ?>contact"><?php echo __('CONTACT')?></a>
+	              			</li>
 	            		</ul>
 	          		</div>
 	        	</div>
@@ -85,14 +103,14 @@
 			<div class="da-slide">
 				<h2>StartupPlace San Marcos</h2>
 				<p>Bienvenidos a StartupPlace San Marcos la primera comunidad de emprendedores tecnológicos conformada y dirigida por estudiantes sanmarquinos...</p>
-				<a href="about.html" class="da-link">Me interesa</a>
-				<div class="da-img"><img src="static/img/parallax-slider/logo-cover.png" alt="image01" /></div>
+				<a href="<?php echo URL::base(); ?>about" class="da-link">Me interesa</a>
+				<div class="da-img"><img src="<?php echo URL::base(); ?>assets/img/parallax-slider/logo-cover.png" alt="image01" /></div>
 			</div>
 			<div class="da-slide">
 				<h2>ideaStartup</h2>
 				<p>Si tienes esa idea incre&iacute;ble que puedes montarla sobre internet, es momento de trabajarla y ejecutarla lo m&aacute;s r&aacute;pido posible; en StartupPlace te guiamos en la busca del &eacute;xito como emprendedor...</p>
-				<a href="ideastartup.html" class="da-link">Me interesa</a>
-				<div class="da-img"><img src="static/img/parallax-slider/workshop-cover.png" alt="image02" /></div>
+				<a href="<?php echo URL::base(); ?>ideastartup" class="da-link">Me interesa</a>
+				<div class="da-img"><img src="<?php echo URL::base(); ?>assets/img/parallax-slider/workshop-cover.png" alt="image02" /></div>
 			</div>
 			<nav class="da-arrows">
 				<span class="da-arrows-prev"></span>
@@ -177,7 +195,7 @@
 								<h4><a href="ideastartup.html">ideaStartup</a></h4>
 								<p>El primer programa de desarrollo para emprendedores tecnol&oacute;gicos organizado por StartupPlace.</p>
 							</div>
-							<a class="post-entry" href="ideastartup.html">Ver m&aacute;s...</a>
+							<a class="post-entry" href="<?php echo URL::base(); ?>ideastartup">Ver m&aacute;s...</a>
         				</div>
 
 						<div class="span3">
@@ -187,10 +205,10 @@
 								</div>
 							</div>
 							<div class="item-description">
-								<h4><a href="event-accept-challenge.html#video-alvaro">&Aacute;lvaro Z&aacute;rate te invita al evento de startupplace</a></h4>
-								<p><a href="event-accept-challenge.html#alvaro-speaker">&Aacute;lvaro</a>, coordinardor General de Lima Valley, hablar&aacute; sobre el emprendimiento tecnol&oacute;gico y las nuevas oportunidades para los emprendedores peruanos.</p>
+								<h4><a href="<?php echo URL::base(); ?>event01#video-alvaro">&Aacute;lvaro Z&aacute;rate te invita al evento de startupplace</a></h4>
+								<p><a href="<?php echo URL::base(); ?>event01#alvaro-speaker">&Aacute;lvaro</a>, coordinardor General de Lima Valley, hablar&aacute; sobre el emprendimiento tecnol&oacute;gico y las nuevas oportunidades para los emprendedores peruanos.</p>
 							</div>
-							<a class="post-entry" href="event-accept-challenge.html#video-alvaro">Ver m&aacute;s...</a>
+							<a class="post-entry" href="<?php echo URL::base(); ?>event01#video-alvaro">Ver m&aacute;s...</a>
 		        		</div>
 
 						<div class="span3">
@@ -200,10 +218,10 @@
 								</div>
 							</div>
 							<div class="item-description">
-								<h4><a href="event-accept-challenge.html#video-mario">Dipoo asiste al evento de StartupPlace</a></h4>
-								<p>Dipoo tambi&eacute;n estar&aacute; presente, <a href="event-accept-challenge.html#mario-speaker">Mario</a> (su co-fundador) contar&aacute; sobre las experencias por la cuales paso esta tan mencionada Startup y cuales son los nuevos retos que se vienen en camino.</p>
+								<h4><a href="<?php echo URL::base(); ?>event01#video-mario">Dipoo asiste al evento de StartupPlace</a></h4>
+								<p>Dipoo tambi&eacute;n estar&aacute; presente, <a href="<?php echo URL::base(); ?>event01#mario-speaker">Mario</a> (su co-fundador) contar&aacute; sobre las experencias por la cuales paso esta tan mencionada Startup y cuales son los nuevos retos que se vienen en camino.</p>
 							</div>
-							<a class="post-entry" href="event-accept-challenge.html#video-mario">Ver m&aacute;s...</a>
+							<a class="post-entry" href="<?php echo URL::base(); ?>event01#video-mario">Ver m&aacute;s...</a>
 						</div>
 
         			</div>
@@ -266,8 +284,8 @@
 				<div class="span9">
 					<div id="footer-menu-links">
 						<ul id="footer-nav">
-							<li><a href="about.html">Sobre nosotros</a></li>
-							<li><a href="contact.html">Contacto</a></li>
+							<li><a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a></li>
+							<li><a href="<?php echo URL::base(); ?>contact"><?php echo __('CONTACT')?></a></li>
 						</ul>
 					</div>
 				</div>
@@ -305,7 +323,7 @@
 				<!-- start: location map -->
 				<div class="span3">
 					<h3>Estamos aqu&iacute;</h3>
-					<div id="small-map-container"><a href="contact.html"></a></div>
+					<div id="small-map-container"><a href="<?php echo URL::base(); ?>contact"></a></div>
 					<iframe id="small-map" width="210" height="210" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&source=s_q&hl=es-419&geocode=&q=Universidad+Nacional+Mayor+de+San+Marcos,+Lima,+Per%C3%BA&aq=0&oq=Universidad+Nacional+Ma&sll=40.396764,-3.713379&sspn=9.75133,20.280762&ie=UTF8&hq=Universidad+Nacional+Mayor+de+San+Marcos,+Lima,+Per%C3%BA&ll=-12.056451,-77.083828&spn=0.010135,0.009152&z=14&iwloc=near&output=embed"></iframe>
 				</div>
 				<!-- end: location map  -->
