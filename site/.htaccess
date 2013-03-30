@@ -1,8 +1,11 @@
+# protect from sniffing directory
+Options All -Indexes -Multiviews	
+
 # Turn on URL rewriting
 RewriteEngine On
 
 # Installation directory
-RewriteBase /
+RewriteBase /startupplace/site
 
 # Protect hidden files from being viewed
 <Files .*>
