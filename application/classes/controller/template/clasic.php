@@ -70,7 +70,6 @@ class Controller_Template_Clasic extends Controller_Template
 				'assets/js/jquery.cslider.js',
 				'assets/js/slider.js',
 				'assets/js/fancybox.js',
-				'assets/js/custom.js',
 			);
 	
 			$this->template->styles = array_merge( $this->template->styles, $styles );
