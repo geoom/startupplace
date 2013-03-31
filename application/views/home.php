@@ -425,6 +425,7 @@
 	<!-- start: Java Script -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<?php foreach ($scripts as $file) echo HTML::script($file), PHP_EOL ?>
+	<script defer="defer" src="<?php echo URL::base(); ?>assets/js/custom.js"></script>
 	<!-- end: Java Script -->
 
 	<div id="fb-root"></div>
