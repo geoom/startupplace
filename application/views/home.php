@@ -24,15 +24,7 @@
 	<!-- end: Facebook Open Graph -->
 
 	<!-- start: CSS -->
-	<link href="<?php echo URL::base(); ?>assets/css/bootstrap.css" rel="stylesheet">
-	<link href="<?php echo URL::base(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="<?php echo URL::base(); ?>assets/css/style.css" rel="stylesheet">
-	<link href="<?php echo URL::base(); ?>assets/css/parallax-slider.css" rel="stylesheet">
-	<link href="<?php echo URL::base(); ?>assets/css/startupplace.css" rel="stylesheet">
-	<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-	<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-	<link href="http://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
-	<link href="http://fonts.googleapis.com/css?family=Economica:700,400italic" rel="stylesheet">
+	<?php foreach ($styles as $file => $type) echo HTML::style($file, array('media' => $type)), PHP_EOL ?>
 	<!-- end: CSS -->
 
 	<!-- The icon -->
@@ -432,15 +424,7 @@
 
 	<!-- start: Java Script -->
 	<!-- Placed at the end of the document so the pages load faster -->
-
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="<?php echo URL::base(); ?>assets/js/bootstrap.js"></script>
-	<script src="<?php echo URL::base(); ?>assets/js/isotope.js"></script>
-	<script src="<?php echo URL::base(); ?>assets/js/flexslider.js"></script>
-	<script src="<?php echo URL::base(); ?>assets/js/carousel.js"></script>
-	<script src="<?php echo URL::base(); ?>assets/js/jquery.cslider.js"></script>
-	<script src="<?php echo URL::base(); ?>assets/js/slider.js"></script>
-	<script src="<?php echo URL::base(); ?>assets/js/fancybox.js"></script>
+	<?php foreach ($scripts as $file) echo HTML::script($file), PHP_EOL ?>
 	<script defer="defer" src="<?php echo URL::base(); ?>assets/js/custom.js"></script>
 	<!-- end: Java Script -->
 
