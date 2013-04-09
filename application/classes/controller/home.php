@@ -58,10 +58,9 @@ class Controller_Home extends Controller_Template {
 			);
 
 			$scripts = array(
-				'http://code.jquery.com/jquery.min.js',
+				'assets/js/jquery-1.8.2.js',
 				'assets/js/bootstrap.js',
 				'assets/js/isotope.js',
-				'assets/js/jquery.imagesloaded.js',
 				'assets/js/flexslider.js',
 				'assets/js/carousel.js',
 				'assets/js/jquery.cslider.js',
