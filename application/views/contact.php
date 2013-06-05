@@ -29,7 +29,7 @@
 	<!-- end: CSS -->
 
 	<!-- The icon -->
-    <link rel="shortcut icon" href="<?php echo URL::base(); ?>favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?php echo URL::base(); ?>assets/ico/favicon.ico" type="image/x-icon"/>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -68,19 +68,21 @@
 		        			}else{ echo "<li>";} ?>
 		            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
 		            		</li>
-		            		<?php if(Request::current()->uri() == "ideastartup"){ 
-		        				echo "<li class=\"active\">";
-		        			}else{ echo "<li>";} ?>
-		            			<a href="<?php echo URL::base(); ?>ideastartup"><?php echo __('IDEASTARTUP')?></a>
-		            		</li>
 		            		<?php if(Request::current()->uri() == "events"){ 
 		        				echo "<li class=\"active dropdown\">";
 		        			}else{ echo "<li class=\"dropdown\">";} ?>
 	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
 	                			<ul class="dropdown-menu dropdown-limited">
-	                  				<li><a href="<?php echo URL::base(); ?>event01">
-	                  					<p><?php echo __('EVENT01')?></p>
-	                  				</a></li>
+	                  				<li>
+                  					<a href="<?php echo URL::base(); ?>event01">
+                  						<p><?php echo __('EVENT01')?></p>
+                  					</a>
+                  				</li>
+                  				<li>
+                  					<a href="<?php echo URL::base(); ?>event02">
+                  						<p><?php echo __('EVENT02')?></p>
+                  					</a>
+                  				</li>
 	                			</ul>
 	              			</li>
 	              			<?php if(Request::current()->uri() == "contact"){ 

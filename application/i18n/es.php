@@ -15,4 +15,5 @@ return array(
 	'user.password.pwdneusr'	=> 'No deberia ser el mismo ...',
 
     'EVENT01' => 'Acepta el reto de ser un emprendedor tecnológico',
+    'EVENT02' => 'Pasi&oacute;n por emprender, tecnolog&iacute;a por descubrir',
 );

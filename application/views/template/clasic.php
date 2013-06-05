@@ -28,7 +28,7 @@
 	<!-- end: CSS -->
 
 	<!-- The icon -->
-    <link rel="shortcut icon" href="<?php echo URL::base(); ?>favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?php echo URL::base(); ?>assets/ico/favicon.ico" type="image/x-icon"/>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

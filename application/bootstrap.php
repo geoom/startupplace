@@ -81,7 +81,7 @@ else
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/startupplace/site',
+	'base_url'   => '/startupplace',
 	'index_file' => FALSE, // SEO (avoid index.php/mycontroller/action)
 	'profile' => (Kohana::$environment !== Kohana::DEVELOPMENT), //see how good you are
 	'caching' => (Kohana::$environment === Kohana::DEVELOPMENT),

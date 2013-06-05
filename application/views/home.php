@@ -28,7 +28,7 @@
 	<!-- end: CSS -->
 
 	<!-- The icon -->
-    <link rel="shortcut icon" href="<?php echo URL::base(); ?>favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?php echo URL::base(); ?>assets/ico/favicon.ico" type="image/x-icon"/>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -66,19 +66,21 @@
 		        			}else{ echo "<li>";} ?>
 		            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
 		            		</li>
-		            		<?php if(Request::current()->uri() == "ideastartup"){ 
-		        				echo "<li class=\"active\">";
-		        			}else{ echo "<li>";} ?>
-		            			<a href="<?php echo URL::base(); ?>ideastartup"><?php echo __('IDEASTARTUP')?></a>
-		            		</li>
 		            		<?php if(Request::current()->uri() == "events"){ 
 		        				echo "<li class=\"active dropdown\">";
 		        			}else{ echo "<li class=\"dropdown\">";} ?>
 	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
 	                			<ul class="dropdown-menu dropdown-limited">
-	                  				<li><a href="<?php echo URL::base(); ?>event01">
-	                  					<p><?php echo __('EVENT01')?></p>
-	                  				</a></li>
+	                  				<li>
+                  					<a href="<?php echo URL::base(); ?>event01">
+                  						<p><?php echo __('EVENT01')?></p>
+                  					</a>
+                  				</li>
+                  				<li>
+                  					<a href="<?php echo URL::base(); ?>event02">
+                  						<p><?php echo __('EVENT02')?></p>
+                  					</a>
+                  				</li>
 	                			</ul>
 	              			</li>
 	              			<?php if(Request::current()->uri() == "contact"){ 
@@ -104,13 +106,17 @@
 				<h2>StartupPlace San Marcos</h2>
 				<p>Bienvenidos a StartupPlace San Marcos la primera comunidad de emprendedores tecnológicos conformada y dirigida por estudiantes sanmarquinos...</p>
 				<a href="<?php echo URL::base(); ?>about" class="da-link">Me interesa</a>
-				<div class="da-img"><img src="<?php echo URL::base(); ?>assets/img/parallax-slider/logo-cover.png" alt="image01" /></div>
+				<div class="da-img">
+					<img src="<?php echo URL::base();?>assets/img/parallax-slider/logo-cover.png" alt="image01" />
+				</div>
 			</div>
 			<div class="da-slide">
-				<h2>ideaStartup</h2>
-				<p>Si tienes esa idea incre&iacute;ble que puedes montarla sobre internet, es momento de trabajarla y ejecutarla lo m&aacute;s r&aacute;pido posible; en StartupPlace te guiamos en la busca del &eacute;xito como emprendedor...</p>
-				<a href="<?php echo URL::base(); ?>ideastartup" class="da-link">Me interesa</a>
-				<div class="da-img"><img src="<?php echo URL::base(); ?>assets/img/parallax-slider/workshop-cover.png" alt="image02" /></div>
+				<h2>Startup</h2>
+				<p>Pasión por emprender, tecnología por descubrir...</p>
+				<a href="<?php echo URL::base(); ?>event02" class="da-link">Me interesa</a>
+				<div class="da-img">
+					<img src="<?php echo URL::base();?>assets/img/parallax-slider/workshop-cover-02.png" alt="workshop" />
+				</div>			
 			</div>
 			<nav class="da-arrows">
 				<span class="da-arrows-prev"></span>
@@ -184,52 +190,57 @@
 					<div class="title"><h3>&Uacute;ltimas noticias</h3></div>
 					<!-- start: Row -->
 		      		<div class="row">
-						<div class="span3">
+        				<div class="span3">
 							<div class="picture">
-								<a href="static/img/events/13-002/afiche_taller.png" rel="image" title="ideaStartup poster">
-									<img src="<?php echo URL::base(); ?>assets/img/events/13-002/afiche_taller.png" >
+								<a href="<?php echo URL::base(); ?>assets/img/events/13-003/afiche_taller.png" rel="image" title="Startup poster">
+									<img src="<?php echo URL::base(); ?>assets/img/events/13-003/afiche_taller.png">
 									<div class="image-overlay-zoom"></div>
 								</a>
 							</div>
 							<div class="item-description">
-								<h4><a href="ideastartup.html">ideaStartup</a></h4>
-								<p>El primer programa de desarrollo para emprendedores tecnol&oacute;gicos organizado por StartupPlace.</p>
+								<h4><a href="<?php echo URL::base(); ?>event02">Startup</a></h4>
+								<p>Pasión por emprender, tecnología por descubrir....</p>
 							</div>
-							<a class="post-entry" href="<?php echo URL::base(); ?>ideastartup">Ver m&aacute;s...</a>
+							<a class="post-entry" href="<?php echo URL::base(); ?>event02">Ver más...</a>
         				</div>
 
 						<div class="span3">
 							<div class="post-img video">
 								<div class="flex-video">
-									<iframe src="http://player.vimeo.com/video/57426743?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									<iframe src="http://player.vimeo.com/video/49258882?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 								</div>
 							</div>
 							<div class="item-description">
-								<h4><a href="<?php echo URL::base(); ?>event01#video-alvaro">&Aacute;lvaro Z&aacute;rate te invita al evento de startupplace</a></h4>
-								<p><a href="<?php echo URL::base(); ?>event01#alvaro-speaker">&Aacute;lvaro</a>, coordinardor General de Lima Valley, hablar&aacute; sobre el emprendimiento tecnol&oacute;gico y las nuevas oportunidades para los emprendedores peruanos.</p>
+								<h4><a href="<?php echo URL::base(); ?>event02">Nubelo</a></h4>
+								<p>
+									Encontrá de forma fácil, segura y gratuita a los profesionales 
+									para cubrir tus necesidades.
+								</p>
 							</div>
-							<a class="post-entry" href="<?php echo URL::base(); ?>event01#video-alvaro">Ver m&aacute;s...</a>
 		        		</div>
 
 						<div class="span3">
 							<div class="post-img video">
 								<div class="flex-video">
-									<iframe src="http://player.vimeo.com/video/57520227?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									<iframe src="http://player.vimeo.com/video/51110850?title=0&amp;byline=0&amp;portrait=0" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
 								</div>
 							</div>
 							<div class="item-description">
-								<h4><a href="<?php echo URL::base(); ?>event01#video-mario">Dipoo asiste al evento de StartupPlace</a></h4>
-								<p>Dipoo tambi&eacute;n estar&aacute; presente, <a href="<?php echo URL::base(); ?>event01#mario-speaker">Mario</a> (su co-fundador) contar&aacute; sobre las experencias por la cuales paso esta tan mencionada Startup y cuales son los nuevos retos que se vienen en camino.</p>
+								<h4>
+									<a href="<?php echo URL::base(); ?>event02">Helena App for tablets</a>
+								</h4>
+								<p>
+									Helena es una aplicación que permite a las personas ciegas o con 
+									baja visión a usar tabletas utilizando interfaces accesibles basadas 
+									en el tacto, el sonido, la vibración, o la voz.
+								</p>							
 							</div>
-							<a class="post-entry" href="<?php echo URL::base(); ?>event01#video-mario">Ver m&aacute;s...</a>
 						</div>
-
         			</div>
 					<!-- end: Row -->
 				</div>
 
         		<div class="span3">
-					
         			<!-- start: social -->
         			<div class="social-container">
         				<div class="title"><h3>Comparte</h3></div>
