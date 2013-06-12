@@ -25,7 +25,7 @@
 	        			}else{ echo "<li>";} ?>
 	            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
 	            		</li>
-	            		<?php if(Request::current()->uri() == "events" || Request::current()->uri() == "event01"){ 
+	            		<?php if(Request::current()->uri() == "events" || Request::current()->uri() == "event01" || Request::current()->uri() == "event02"){ 
 	        				echo "<li class=\"active dropdown\">";
 	        			}else{ echo "<li class=\"dropdown\">";} ?>
                 			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
