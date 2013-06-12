@@ -1,5 +1,12 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * ideaStartup controller.
+ *
+ * @package    Controller
+ * @category   Controller
+ * @author     George Mejia
+ */
 class Controller_Ideastartup extends Controller_Template_Clasic {
 
 	public function action_index()

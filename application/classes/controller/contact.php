@@ -1,5 +1,12 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * Contact controller.
+ *
+ * @package    Controller
+ * @category   Controller
+ * @author     George Mejia
+ */
 class Controller_Contact extends Controller_Template {
 
 	public $template = 'contact';

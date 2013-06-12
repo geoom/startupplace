@@ -1,5 +1,12 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * Home controller.
+ *
+ * @package    Controller
+ * @category   Controller
+ * @author     George Mejia
+ */
 class Controller_Home extends Controller_Template {
 
 	public $template = 'home';

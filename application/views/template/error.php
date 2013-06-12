@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title>P&aacute;gina no encontrada | StartupPlace San Marcos</title> 
@@ -25,14 +24,7 @@
 	<!-- end: Facebook Open Graph -->
 
     <!-- start: CSS -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="../static/css/style.css" rel="stylesheet">
-	<link href="../static/css/startupplace.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+	<?php foreach ($styles as $file => $type) echo HTML::style($file, array('media' => $type)), PHP_EOL ?>
 	<!-- end: CSS -->
 
 	<!-- The icon -->
@@ -49,24 +41,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="span6" style="margin-top:60px;">
-		   		<h3>Oops!</h3>
-		   		<p>Lo sentimos, los aliens nos han robado la p&aacute;gina que estas buscando</p>
-		   		<p>Es una l&aacute;stima :(</p>
-		   		<br>
-		   		<p>
-				<a href="http://startupplace.org" class="btn btn-primary btn-large"><i class="icon-white icon-home"></i> Regresar al inicio</a>
+				<?php echo $content ?>
+				<br>
+				<p>
+					<a href="http://startupplace.org" class="btn btn-primary btn-large">
+						<i class="icon-white icon-home"></i> Regresar al inicio
+					</a>
 				</p>
 				<br>
-				<p><img src="../static/img/logotype.png" alt=""></p>
-	   		</div>
-	   		<div class="span6" style="margin-top:0px;">
-	   			<p><img src="../static/img/sheep.png" alt=""></p>
-	   		</div>
+				<p><img src="<?php echo URL::base(); ?>assets/img/logotype.png" alt=""/></p>
 			</div>
+			<div class="span6" style="margin-top:0px;">
+				<p><img src="<?php echo URL::base(); ?>assets/img/sheep.png" alt=""></p>
+			</div>
+		</div>
 	</div>
 	<!-- end: conten -->	
-	
-
-
 </body>
 </html>

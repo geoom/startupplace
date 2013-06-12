@@ -1,5 +1,12 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * About controller.
+ *
+ * @package    Controller
+ * @category   Controller
+ * @author     George Mejia
+ */
 class Controller_About extends Controller_Template_Clasic {
 
 	public function action_index()

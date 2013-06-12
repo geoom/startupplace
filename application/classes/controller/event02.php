@@ -1,5 +1,12 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * Event 2 controller.
+ *
+ * @package    Controller
+ * @category   Controller
+ * @author     George Mejia
+ */
 class Controller_Event02 extends Controller_Template_Clasic {
 
 	public function action_index()
