@@ -361,9 +361,8 @@
 	<!-- end: Copyright -->
 
 	<!-- start: Java Script -->
-	<!-- Placed at the end of the document so the pages load faster -->
 	<?php foreach ($scripts as $file) echo HTML::script($file), PHP_EOL ?>
-	<script defer="defer" src="<?php echo URL::base(); ?>assets/js/custom.js"></script>
+	<script src="<?php echo URL::base(); ?>assets/js/startupplace.min.js" async></script>
 	<!-- end: Java Script -->
 
 	<script type="text/javascript">

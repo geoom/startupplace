@@ -34,9 +34,6 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<!--[if IE 9]>
-      <link href="css/styleie9.css" rel="stylesheet">
-    <![endif]-->
 </head>
 <body>
 
@@ -45,10 +42,8 @@
 	<?php include Kohana::find_file('views/fragment', 'footerforclasic'); ?>
 
 	<!-- start: Java Script -->
-	<!-- Placed at the end of the document so the pages load faster -->
 	<?php foreach ($scripts as $file) echo HTML::script($file), PHP_EOL ?>
-	<script defer="defer" src="<?php echo URL::base(); ?>assets/js/custom.js"></script>
-	<script defer="defer" src="<?php echo URL::base(); ?>assets/js/startupplace.js"></script>
+	<script src="<?php echo URL::base(); ?>assets/js/startupplace.min.js" async></script>
 	<!-- end: Java Script -->
 
 	<div id="fb-root"></div>

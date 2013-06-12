@@ -36,7 +36,7 @@
 							</div>
 							<div class="span5">
 								<p>
-									Es el Co-Fundador de <a href="http://www.startupacademy.la" target="_blank">Startup Academy</a> y Coordinador General de <a href="http://www.lima-valley.com" target="_blank">Lima-Valley</a>. Antes de eso, &Aacute;lvaro fund&oacute; <a href="http://www.soom.me" target="_blank">Soom.me</a> , startup social finalista en la convocatoria Wayra Per&uacute; 2011. También es Vicepresidente del Comité de Innovaci&oacute;n Tecnol&oacute;gica en PDMA Cap&iacute;tulo Perú, Asesor de proyectos finalistas de Wayra Per&uacute; 2012, Co-Organizador y Advisor en <a href="http://www.startupworld.com" target="_blank">Startup World</a> y Partner en <a href="http://www.appcircus.com" target="_blank">App Circus</a>.
+									Es el Co-Fundador de Startup Academy y Coordinador General de Lima-Valley. Antes de eso, &Aacute;lvaro fund&oacute; <a href="http://www.soom.me" target="_blank">Soom.me</a> , startup social finalista en la convocatoria Wayra Per&uacute; 2011. También es Vicepresidente del Comité de Innovaci&oacute;n Tecnol&oacute;gica en PDMA Cap&iacute;tulo Perú, Asesor de proyectos finalistas de Wayra Per&uacute; 2012, Co-Organizador y Advisor en <a href="http://www.startupworld.com" target="_blank">Startup World</a> y Partner en <a href="http://www.appcircus.com" target="_blank">App Circus</a>.
 								</p>
 								<div class="social_profiles">
 									<ul class="social-bookmarks">

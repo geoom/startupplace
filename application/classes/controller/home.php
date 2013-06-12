@@ -46,11 +46,10 @@ class Controller_Home extends Controller_Template {
 		if ($this->auto_render)
 		{
 			$styles = array(
-				'assets/css/bootstrap.css' => 'screen',
-				'assets/css/bootstrap-responsive.css' => 'screen',
-				'assets/css/style.css' => 'screen',
-				'assets/css/parallax-slider.css' => 'screen',
-				'assets/css/startupplace.css' => 'screen',
+				'assets/css/bootstrap.min.css' => 'screen',
+				'assets/css/bootstrap-responsive.min.css' => 'screen',
+				'assets/css/startupplace.min.css' => 'screen',
+				'assets/css/parallax-slider.min.css' => 'screen',
 				'http://fonts.googleapis.com/css?family=Droid+Sans:400,700' => 'screen',
 				'http://fonts.googleapis.com/css?family=Droid+Serif' => 'screen',
 				'http://fonts.googleapis.com/css?family=Boogaloo' => 'screen',
@@ -58,14 +57,13 @@ class Controller_Home extends Controller_Template {
 			);
 
 			$scripts = array(
-				'assets/js/jquery-1.8.2.js',
-				'assets/js/bootstrap.js',
-				'assets/js/isotope.js',
-				'assets/js/flexslider.js',
-				'assets/js/carousel.js',
-				'assets/js/jquery.cslider.js',
-				'assets/js/slider.js',
-				'assets/js/fancybox.js',
+				// 'assets/js/jquery-1.8.2.min.js',
+				'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
+				'http://code.jquery.com/jquery-migrate-1.2.1.min.js',
+				'assets/js/bootstrap.min.js',
+				'assets/js/sp-cover-slider.min.js',
+				'assets/js/fancybox.min.js',
+				'assets/js/imagesloaded.pkgd.min.js',
 			);
 	
 			$this->template->styles = array_merge( $this->template->styles, $styles );
