@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="<?php echo substr(I18n::$lang, 0, 2); ?>"> 
 <head>
-
 	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title><?php echo $title ?></title> 
-	<meta name="description" content="Informacion de contacto de startupplace san marcos, una comunidad de emprendimiento sanmarquino"/>
-	<meta name="keywords" content="contacto startupplace, startup, informacion de contacto" />
-	<meta name="author" content="George"/>
+	<meta name="description" content="<?php echo $description ?>"/>
+	<meta name="keywords" content="<?php echo $keywords ?>" />
+	<meta name="author" content="<?php echo $author ?>"/>
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -15,10 +14,10 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="StartupPlace San Marcos"/>
-	<meta property="og:description" content="Comunidad sanmarquina de emprendimiento tecnologico"/>
+	<meta property="og:title" content="<?php echo $title ?>"/>
+	<meta property="og:description" content="<?php echo $description ?>"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://startupplace.org"/>
+	<meta property="og:url" content="<?php echo $url ?>"/>
 	<meta property="og:image" content="http://startupplace.org/img/logotype.png"/>
 	<meta property="fb:page_id" content="365738726854197" />
 	<meta property="fb:admins" content="100001120638005" />

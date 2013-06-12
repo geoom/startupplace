@@ -14,6 +14,6 @@ return array(
 	':field must not be empty'	=> ':este campo no puede ser vacio',
 	'user.password.pwdneusr'	=> 'No deberia ser el mismo ...',
 
-    'EVENT01' => 'Acepta el reto de ser un emprendedor tecnológico',
+    'EVENT01' => 'Acepta el reto de ser un emprendedor tecnol&oacute;gico',
     'EVENT02' => 'Pasi&oacute;n por emprender, tecnolog&iacute;a por descubrir',
 );

@@ -7,6 +7,10 @@ class Controller_Contact extends Controller_Template {
 	public function action_index()
 	{
 		$this->template->title = 'Contacto | StartupPlace';
+		$this->template->description = "Con&eacute;ctate con nosotros y cu&eacute;ntanos tus sugerencias.";
+		$this->template->keywords = "contacto startupplace, startup, informacion de contacto, contacto";
+		$this->template->url = "http://startupplace.org/contact";
+		$this->template->author = "George Mejia";
 	}
 
 	/**

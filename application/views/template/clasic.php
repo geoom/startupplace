@@ -4,9 +4,9 @@
 	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title><?php echo $titleMeta ?></title> 
-	<meta name="description" content="La comunidad de emprendimiento tecnol&oacute;gico en la UNMSM, atr&eacute;vete a innovar e iniciar la aventura como emprendedor. En StartupPlace te guiamos en la busca del &eacute;xito como emprendedor."/>
-	<meta name="keywords" content="startupplace, startup, san marcos" />
-	<meta name="author" content="George"/>
+	<meta name="description" content="<?php echo $description ?>"/>
+	<meta name="keywords" content="<?php echo $keywords ?>" />
+	<meta name="author" content="<?php echo $author ?>"/>
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -14,10 +14,10 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="StartupPlace San Marcos"/>
-	<meta property="og:description" content="Comunidad sanmarquina de emprendimiento tecnologico"/>
+	<meta property="og:title" content="<?php echo $titleMeta ?>"/>
+	<meta property="og:description" content="<?php echo $description ?>"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://startupplace.org"/>
+	<meta property="og:url" content="<?php echo $url ?>"/>
 	<meta property="og:image" content="http://startupplace.org/img/logotype.png"/>
 	<meta property="fb:page_id" content="365738726854197" />
 	<meta property="fb:admins" content="100001120638005" />

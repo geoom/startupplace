@@ -54,8 +54,8 @@
 			       	<div class="title"><h3>Nuestras habilidades</h3></div>
 			       	<ul class="progress-bar">
 			        	<li>
-			            	<h5>Desarrollo de software ( 50% )</h5>
-			            	<div class="meter"><span style="width: 50%"></span></div>
+			            	<h5>Desarrollo de software ( 30% )</h5>
+			            	<div class="meter"><span style="width: 30%"></span></div>
 			          	</li>
 			          	<li>
 			            	<h5>Diseño gr&aacute;fico ( 40% )</h5>
@@ -70,8 +70,8 @@
 			            	<div class="meter"><span style="width: 50%"></span></div>
 			          	</li>
 			          	<li>
-			            	<h5>Plan estrat&eacute;gico ( 40% )</h5>
-			            	<div class="meter"><span style="width: 40%"></span></div>
+			            	<h5>Plan estrat&eacute;gico ( 65% )</h5>
+			            	<div class="meter"><span style="width: 65%"></span></div>
 			          	</li>
 			      	</ul>
 			      	<!-- end: Skills -->

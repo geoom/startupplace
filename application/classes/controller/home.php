@@ -6,7 +6,11 @@ class Controller_Home extends Controller_Template {
 
 	public function action_index()
 	{
-		$this->template->title = 'Startupplace';
+		$this->template->title = 'Startupplace | Red universitaria de emprendedores e innovadores tecnol&oacute;gicos en internet.';
+		$this->template->description = "En StartupPlace te guiamos en la busca del &eacute;xito como emprendedor. Atr&eacute;vete a innovar e iniciar la aventura como emprendedor.";
+		$this->template->keywords = "startupplace, startup, san marcos";
+		$this->template->url = "http://startupplace.org";
+		$this->template->author = "George Mejia";
 	}
 
 	/**
