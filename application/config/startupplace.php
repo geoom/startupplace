@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct access allowed.');
 
 return array(
-	'encrypt_key' => 'ajglgzfhnjbhgftyr', 
+	'encrypt_key' => 'ajglgzfhnjbhgftyr',
 	'cookie_salt' => 'lkasdklasjklstartuplacejkutjtysagduj',
 	'cookie_lifetime' => DATE::YEAR,
 	'session_lifetime' => 0,
