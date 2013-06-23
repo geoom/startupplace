@@ -148,19 +148,5 @@ Kohana::modules(array(
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	));
 
-/**
- * Set the routes. Each route must have a minimum of a name, a URI and a set of
- * defaults for the URI.
- */
-Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
-		'controller' => 'home', //application/classes/controller/home.php
-		'action'     => 'index',
-	));
-
-Route::set('error', 'error/<action>(/<message>)', array('action' => '[0-9]++', 'message' => '.+'))
-    ->defaults(array(
-        'controller' => 'error'
-    ));
-
-//Route::set('password', '<controller>/<action>/<token>/<email>');
+// Load the routes
+require APPPATH.'routes'.EXT;
