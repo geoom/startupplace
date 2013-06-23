@@ -1,0 +1,16 @@
+/* startupplace.org */
+/* humanstxt.org */
+
+/* TEAM */
+	Web developer: George Mejia
+	Contact: gmejia.fisi@gmail.com
+	Twitter: @geoom
+	From: Peru
+
+/* SITE */
+	Last update: 2013/06/20
+	Language: Spanish / English / Castellano
+	Doctype: HTML5
+	Standards: HTML5, CSS3
+	Components: Kohana Framework 3.2.2, Bootstrap 2.3.2, jQuery 1.10.1
+	Editor: Sublime Text, Notepad++
