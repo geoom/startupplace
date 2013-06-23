@@ -7,7 +7,7 @@ class Controller_Dashboard extends Controller_Template_Admin {
     {
         // user already logged in, redirect to dashboard
         if (Auth::instance()->logged_in() == 0) {
-            $this->request->redirect('auth/login');
+            $this->request->redirect('dashboard/auth/login');
         }
         $this->template->title = 'Panel principal';
         $this->template->content = 'dashboard index';

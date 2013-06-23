@@ -18,6 +18,8 @@
     <!-- The icon -->
     <link rel="shortcut icon" href="<?php echo URL::base(); ?>assets/ico/favicon.ico" type="image/x-icon"/>
 
+    <link type="text/plain" rel="author" href="http://startupplace.org/humans.txt" />
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,11 +35,13 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><?php echo HTML::anchor("", "Inicio"); ?></li>
+                <li class="active"><?php echo HTML::anchor("dashboard", "Inicio"); ?></li>
                 <?php if($logged_in){ ?>
-                    <li><a href="#">Mensajes</a></li>
                     <li><a href="#">Art&iacute;culos</a></li>
-                    <li><?php echo HTML::anchor("auth/logout", "cerrar sesión"); ?></li>
+                      <?php  if(Auth::instance()->logged_in('admin')){ ?>
+                        <li><?php echo HTML::anchor("dashboard/auth/register", "Nuevo usuario"); ?></li>
+                      <?php } ?>
+                    <li><?php echo HTML::anchor("dashboard/auth/logout", "cerrar sesión"); ?></li>
                 <?php } ?>
               </ul>
             </div>

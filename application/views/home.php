@@ -30,6 +30,8 @@
 	<!-- The icon -->
     <link rel="shortcut icon" href="<?php echo URL::base(); ?>assets/ico/favicon.ico" type="image/x-icon"/>
 
+    <link type="text/plain" rel="author" href="http://startupplace.org/humans.txt" />
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

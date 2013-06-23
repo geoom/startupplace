@@ -17,18 +17,19 @@
 		<?php } ?>
 
 	    <div class="heading">
-	        <h2 class="form-heading">Sign In</h2>
+	        <h2 class="form-heading">Iniciar sesi&oacute;n</h2>
 	    </div>
+	    <br/>
 	    <div class="control-group">
-	        <?php echo Form::label('username', 'Username', array('class' => 'control-label','for' => 'inputUsername')) ?>
+	        <?php echo Form::label('username', 'Usuario', array('class' => 'control-label','for' => 'inputUsername')) ?>
 	        <div class="controls">
 	        	<?php echo Form::input('username', $post['username'], array('id'=>'inputUsername', 'placeholder' => 'Ej. pepito163')) ?>
 	        </div>
 	    </div>
 	    <div class="control-group">
-	    	<?php echo Form::label('password', 'Password', array('class' => 'control-label','for' => 'inputPassword')) ?>
+	    	<?php echo Form::label('password', 'Contrase&ntilde;a', array('class' => 'control-label','for' => 'inputPassword')) ?>
 	        <div class="controls">
-	        	<?php echo Form::password('password',NULL, array('id'=>'inputPassword', 'placeholder' => 'Ej. fd788nkd7')) ?>
+	        	<?php echo Form::password('password',NULL, array('id'=>'inputPassword', 'placeholder' => 'Tu clave')) ?>
 	        </div>
 	    </div>
 	    <div class="control-group">
@@ -38,10 +39,9 @@
 	            	Recordarme
 	            	<br/>
 	            </label>
-	            <?php echo Form::submit(NULL, 'Sign In', array('class' => 'btn btn-success')); ?>
+	            <?php echo Form::submit(NULL, 'Ingresar', array('class' => 'btn btn-success')); ?>
 	        </div>
 	    </div>	
 	<?php echo Form::close(); ?>
-	<a href="#" class="btn btn-link">&iquest;Olvistaste tu clave?</a>
-	<?php echo HTML::anchor('auth/register', 'Don\'t have an account?'); ?>
+	<a href="#" class="btn btn-link">Recuperar contrase&ntilde;a</a>
 </div>

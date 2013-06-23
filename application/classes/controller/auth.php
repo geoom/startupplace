@@ -4,7 +4,10 @@ class Controller_Auth extends Controller_Template_Admin {
 
     public function action_index()
     {
-        $this->response->body('AUTH INDEX');
+        if (Auth::instance()->logged_in()) {
+            $this->request->redirect('dashboard');
+        }
+        $this->request->redirect('dashboard/admin/login');
     }
 
     public function action_login() 
@@ -49,14 +52,13 @@ class Controller_Auth extends Controller_Template_Admin {
             ->bind('errors', $errors)
             ->bind('loginerrors', $loginerrors);
     }
-     
-     // public function action_login_form()
-     // {
-     // 	$this->template->content = View::factory('auth/login');
-     // }
 
     public function action_register()
     {
+        if(!Auth::instance()->logged_in('admin')) 
+        {
+            $this->request->redirect('dashboard/auth/login');
+        }
         if (isset($_POST) && Valid::not_empty($_POST)) {
             
             $post = Validation::factory($_POST)
@@ -76,14 +78,9 @@ class Controller_Auth extends Controller_Template_Admin {
                     $model->save();
                     
                     $model->add('roles', ORM::factory('role')->where('name', '=', 'login')->find());
-                    // success login
-                    if (Auth::instance()->login($post['username'], $post['password']))
-                    {
-                        // $this->request->redirect('dashboard');
-                        $this->response->body('OK');
-                    } else {
-                        //TODO error
-                    }
+                    $success_signup = TRUE;
+                    // $post['email'] = "";
+                    // $post['username'] = "";
                 }
                 catch (ORM_Validation_Exception $e) {
                     $errors = $e->errors('user');
@@ -100,13 +97,15 @@ class Controller_Auth extends Controller_Template_Admin {
         // display
         $this->template->content = View::factory('auth/register')
         ->bind('post', $post)
-        ->bind('errors', $errors);
+        ->bind('errors', $errors)
+        ->bind('success_signup', $success_signup);
+
     }
 
     public function action_logout()
     {
         Auth::instance()->logout();
-        $this->request->redirect('auth/login');
+        $this->request->redirect('dashboard/auth/login');
     }
  
 } 
