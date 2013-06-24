@@ -114,6 +114,10 @@ Cookie::$expiration = Kohana::$config->load('startupplace.cookie_lifetime');
 // Only transmit cookies over HTTP, disabling Javascript access
 //Cookie::$httponly = TRUE;
 
+/**
+ * Session
+ */
+Session::$default = 'database';
 
 /**
  * Set the default language

@@ -17,8 +17,6 @@ class Controller_Template_Admin extends Controller_Template {
      */
     public $session;
 
-    public $logged_in;
-
     /**
      * (non-PHPdoc)
      * @see system/classes/kohana/Kohana_Controller::before()
@@ -26,15 +24,27 @@ class Controller_Template_Admin extends Controller_Template {
     public function before()
     {
         parent::before();
-        $this->auth = Auth::instance();
-        $this->session =  Session::instance();
-        $this->logged_in = Auth::instance()->logged_in();
+
+        // $this->auth = Auth::instance();
+        // $this->session =  Session::instance();
+
         if ($this->auto_render)
         {   
+            $this->template->logged_in = FALSE;
+
+            // keep the last url if it's not home/language
+            if(Request::current()->action() != 'language') {
+                Session::instance()->set('controller', Request::current()->uri());
+            }
+            
+            if (Auth::instance()->logged_in())
+            {
+                $this->template->logged_in = TRUE;
+            }
+
             // Initialize empty values
             $this->template->title   = '';
             $this->template->content = '';
-            $this->template->logged_in = $this->logged_in;
 
             $this->template->styles = array();
             $this->template->scripts = array(); 

@@ -17,14 +17,16 @@ class Controller_Template_Clasic extends Controller_Template
 
 		if ($this->auto_render)
 		{
+			$this->template->logged_in = FALSE;
+
 			// keep the last url if it's not home/language
 			if(Request::current()->action() != 'language') {
 				Session::instance()->set('controller', Request::current()->uri());
 			}
 			
-			if (Auth::instance()->logged_in('participant'))
+			if (Auth::instance()->logged_in())
 			{
-				$this->template->loged = TRUE;
+				$this->template->logged_in = TRUE;
 			}
 			
 			// Initialize empty values

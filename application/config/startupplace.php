@@ -7,8 +7,8 @@ return array(
 	'session_lifetime' => 0,
 	'header' => array
 	(
-		'title' => 'STARTUPPLACE WEB SITE',
-		'keyword' => 'STARTUPPLACE WEB SITE',
+		'title' => 'StartupPlace web site',
+		'keyword' => 'StartupPlace web site',
 	),
 	'language' => array
 	(

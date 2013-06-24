@@ -12,6 +12,38 @@ class Controller_Template_Error extends Controller_Template
 
 	public $template = 'template/error';
 	 
+
+	/**
+	 * The before() method is called before your controller action.
+	 * In our template controller we override this method so that we can
+	 * set up default values. These variables are then available to our
+	 * controllers if they need to be modified.
+	 */
+	public function before()
+	{
+		parent::before();
+
+		if ($this->auto_render)
+		{
+			$this->template->logged_in = FALSE;
+			// keep the last url if it's not home/language
+			if(Request::current()->action() != 'language') {
+				Session::instance()->set('controller', Request::current()->uri());
+			}
+			
+			if (Auth::instance()->logged_in())
+			{
+				$this->template->logged_in = TRUE;
+			}
+			
+			// Initialize empty values
+			$this->template->title     = '';
+			$this->template->content     = '';
+			
+			$this->template->styles = array();
+		}
+	}
+
 	/**
 	 * The after() method is called after your controller action.
 	 * In our template controller we override this method so that we can
