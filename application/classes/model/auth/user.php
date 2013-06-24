@@ -29,6 +29,9 @@ public function rules()
             array(array($this, 'unique'), array('username', ':value')),
             array('regex', array(':value', '/^[a-z][a-z0-9]+$/i')),
         ),
+        'password' => array(
+                array('not_empty'),
+        ),
         'email' => array(
             array('not_empty'),
             array('email'),
@@ -59,7 +62,11 @@ public function filters()
  */
 public function labels()
 {
-    return array();
+    return array(
+            'username'         => 'label username',
+            'email'            => 'label email address',
+            'password'         => 'label password',
+        );
 }
 
 /**

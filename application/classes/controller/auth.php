@@ -63,8 +63,15 @@ class Controller_Auth extends Controller_Template_Admin {
             
             $post = Validation::factory($_POST)
             ->rule('email', 'not_empty')
+            ->rule('email', 'email')
+            ->rule('email', 'email_domain')
             ->rule('username', 'not_empty')
-            ->rule('password', 'not_empty');
+            ->rule('username', Kohana::$config->load('startupplace.user.create.username.format'))
+            ->rule('username', 'min_length', array(':value', Kohana::$config->load('startupplace.user.create.username.min_length')))
+            ->rule('username', 'max_length', array(':value', Kohana::$config->load('startupplace.user.create.username.max_length')))
+            ->rule('password', 'not_empty')
+            ->rule('password', 'min_length', array(':value', Kohana::$config->load('startupplace.user.create.password.min_length')))
+            ->rule('password', array($this, 'password_no_equals_username'), array(':validation', ':field', 'username'));
 
             if ($post->check()) {
                 // save
@@ -106,6 +113,14 @@ class Controller_Auth extends Controller_Template_Admin {
     {
         Auth::instance()->logout();
         $this->request->redirect('dashboard/auth/login');
+    }
+
+    static function password_no_equals_username($validation, $password, $username)
+    {
+        if ($validation[$password] === $validation[$username])
+        {
+            $validation->error($password, 'password_no_equals_username');
+        }
     }
  
 } 
