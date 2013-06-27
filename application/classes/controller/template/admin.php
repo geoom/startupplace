@@ -43,8 +43,9 @@ class Controller_Template_Admin extends Controller_Template {
             }
 
             // Initialize empty values
-            $this->template->title   = '';
+            $this->template->title = '';
             $this->template->content = '';
+            $this->template->section_active = '';
 
             $this->template->styles = array();
             $this->template->scripts = array(); 

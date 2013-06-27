@@ -10,6 +10,7 @@ class Controller_Dashboard extends Controller_Template_Admin {
             $this->request->redirect('dashboard/auth/login');
         }
         $this->template->title = 'Panel principal';
+        $this->template->current_section = 'index';
         $this->template->content = 'dashboard index';
     }
 

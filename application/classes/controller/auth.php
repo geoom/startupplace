@@ -7,7 +7,7 @@ class Controller_Auth extends Controller_Template_Admin {
         if (Auth::instance()->logged_in()) {
             $this->request->redirect('dashboard');
         }
-        $this->request->redirect('dashboard/admin/login');
+        $this->request->redirect('dashboard/auth/login');
     }
 
     public function action_login() 

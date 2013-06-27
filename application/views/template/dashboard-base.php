@@ -35,12 +35,20 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><?php echo HTML::anchor("dashboard", "Inicio"); ?></li>
                 <?php if($logged_in){ ?>
-                    <li><a href="#">Art&iacute;culos</a></li>
-                      <?php  if(Auth::instance()->logged_in('admin')){ ?>
-                        <li><?php echo HTML::anchor("dashboard/auth/register", "Nuevo usuario"); ?></li>
-                      <?php } ?>
+                    <?php if($current_section == "index"){
+                      echo "<li class=\"active\">";
+                    }else{ echo "<li>";} ?>
+                      <?php echo HTML::anchor("dashboard", "Inicio"); ?>
+                    </li>
+                    <?php if($current_section == "articles"){
+                      echo "<li class=\"active\">";
+                    }else{ echo "<li>";} ?>
+                      <?php echo HTML::anchor("dashboard/articles", "Art&iacute;culos"); ?>
+                    </li>
+                    <?php  if(Auth::instance()->logged_in('admin')){ ?>
+                      <li><?php echo HTML::anchor("dashboard/auth/register", "Nuevo usuario"); ?></li>
+                    <?php } ?>
                     <li><?php echo HTML::anchor("dashboard/auth/logout", "cerrar sesión"); ?></li>
                 <?php } ?>
               </ul>
@@ -50,10 +58,8 @@
       </div>
 
       <!-- Jumbotron -->
-        <div class="row">
-            <div class="span6 offset3">
-                <?php echo $content ?>
-            </div>
+        <div class="container">
+          <?php echo $content ?>
         </div>
       <hr>
 
