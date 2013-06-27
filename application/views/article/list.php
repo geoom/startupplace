@@ -1,6 +1,6 @@
 <div clas="row">
 	<div class="span4">
-		<a href="article/new" class="btn btn-primary"><i class="icon-pencil icon-white"></i> Nuevo art&iacute;culo</a>
+		<a href="articles/new" class="btn btn-primary"><i class="icon-pencil icon-white"></i> Nuevo art&iacute;culo</a>
 	</div>
 </div>
 <br/><br/><br/>

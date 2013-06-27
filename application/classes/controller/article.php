@@ -2,7 +2,7 @@
  
 class Controller_Article extends Controller_Template_Admin {
      
-    const INDEX_PAGE = 'dashboard/article';
+    const INDEX_PAGE = 'dashboard/articles';
     
     public function before()
     {

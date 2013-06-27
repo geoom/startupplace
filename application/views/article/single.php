@@ -1,22 +1,36 @@
 <div clas="row">
-	<div class="span4">
-		<a href="articles/edit/<?php echo $article->id ?>" class="btn btn-primary"><i class="icon-edit icon-white"></i> <strong>Editar</strong></a>
-		<a href="articles/delete/<?php echo $article->id ?>" class="btn btn-danger"><i class="icon-trash icon-white"></i> <strong>Eliminar</strong></a>
-	</div>
+		<a href="../edit/<?php echo $article->id ?>" class="btn btn-primary"><i class="icon-edit icon-white"></i> Editar</a>
+		<a href="../delete/<?php echo $article->id ?>" class="btn btn-danger"><i class="icon-trash icon-white"></i> Eliminar</a>
+		<a href="../" class="btn"><i class="icon-align-justify"></i> Ver todos los art&iacute;culos</a>
 </div>
-<br/><br/><br/>
+<br/>
 <div clas="row">
-	<div class="span11">
 		<h1><?php echo $article->title; ?></h1>
 	    <p><?php echo $article->content; ?></p>
 	    <div>
-	        <span class="badge badge-success">Posted 2012-08-02 20:47:04</span><div class="pull-right"><span class="label">alice</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span></div>
+	        <span class="badge badge-success">Posted 2012-08-02 20:47:04</span>
+	        <div class="pull-right">
+	        	<span class="label">alice</span> 
+	        	<span class="label">story</span> 
+	        	<span class="label">blog</span> 
+	        	<span class="label">personal</span>
+	        </div>
 	    </div> 
 	    <hr>
+</div>
+
+<div clas="row">
+	<div clas="span6">
+		<div id="comments" style="margin: 10px 0px 10px 0px">
+		    <?php foreach ($article->comments->find_all() as $comment) : ?>
+		        <?php echo View::factory('comment/single', array('comment'=>$comment)); ?>
+		    <?php endforeach; ?>
+		</div>
 	</div>
 </div>
 
-
-
-
-
+<div clas="row">
+	<div clas="span6">
+		<?php echo View::factory('comment/form', array('comment'=>new Model_Comment(),'article'=>$article )); ?>
+	</div>
+</div>

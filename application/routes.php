@@ -5,6 +5,12 @@
  * defaults for the URI.
  */
 
+Route::set('articles', 'dashboard/articles(/<action>(/<id>))')
+	->defaults(array(
+		'controller' => 'article',
+		'action'     => 'index',
+	));
+
 Route::set('admin', 'dashboard(/<controller>(/<action>))')
 	->defaults(array(
 		'controller' => 'dashboard',
