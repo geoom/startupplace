@@ -26,47 +26,65 @@
     <![endif]-->
 </head>
 <body>
-
     <div class="container">
-
-      <div class="masthead">
-        <h3 class="muted">StartupPlace admin</h3>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
+      <br/>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#" name="top">StartupPlace dashboard</a>
+            <div class="nav-collapse collapse">
+              <?php if($logged_in){ ?>
               <ul class="nav">
-                <?php if($logged_in){ ?>
-                    <?php if($current_section == "index"){
-                      echo "<li class=\"active\">";
-                    }else{ echo "<li>";} ?>
-                      <?php echo HTML::anchor("dashboard", "Inicio"); ?>
-                    </li>
-                    <?php if($current_section == "articles"){
-                      echo "<li class=\"active\">";
-                    }else{ echo "<li>";} ?>
-                      <?php echo HTML::anchor("dashboard/articles", "Mis art&iacute;culos"); ?>
-                    </li>
-                    <?php  if(Auth::instance()->logged_in('admin')){ ?>
-                      <?php if($current_section == "auth"){
-                        echo "<li class=\"active\">";
-                      }else{ echo "<li>";} ?>
-                        <?php echo HTML::anchor("dashboard/auth/register", "Nuevo usuario"); ?>
-                      </li>
-                    <?php } ?>
-                    <li><?php echo HTML::anchor("dashboard/auth/logout", "cerrar sesión"); ?></li>
+                <?php if($current_section == "index"){
+                  echo "<li class=\"active\">";
+                }else{ echo "<li>";} ?>
+                  <a href="<?php echo URL::base(); ?>dashboard"><i class="icon-home"></i> Inicio</a>
+                </li>
+                <li class="divider-vertical"></li>
+                <?php if($current_section == "articles"){
+                  echo "<li class=\"active\">";
+                }else{ echo "<li>";} ?>
+                  <a href="<?php echo URL::base(); ?>dashboard/articles"><i class="icon-file"></i> Mis art&iacute;culos</a>
+                </li>
+                <li class="divider-vertical"></li>
+                <?php  if(Auth::instance()->logged_in('admin')){ ?>
+                  <?php if($current_section == "auth"){
+                    echo "<li class=\"active\">";
+                  }else{ echo "<li>";} ?>
+                    <a href="<?php echo URL::base(); ?>dashboard/auth/register"><i class="icon-lock"></i> Crear cuenta</a>
+                  </li>
                 <?php } ?>
+                <li class="divider-vertical"></li>
               </ul>
+              <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="icon-user"></i> <?php echo Auth::instance()->get_user()->username; ?> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon-wrench"></i> Mi cuenta</a></li>
+                  <li class="divider"></li>
+                  <li><a href="<?php echo URL::base(); ?>dashboard/auth/logout"><i class="icon-share"></i> cerrar sesi&oacute;n</a></li>
+                </ul>
+              </div>
+              <?php } ?>
             </div>
+            <!--/.nav-collapse -->
           </div>
-        </div><!-- /.navbar -->
+          <!--/.container-fluid -->
+        </div>
+        <!--/.navbar-inner -->
+      </div> 
+      <!--/.navbar -->
+      <div class="container">
+        <?php echo $content ?>
       </div>
 
-      <!-- Jumbotron -->
-        <div class="container">
-          <?php echo $content ?>
-        </div>
       <hr>
-
       <div class="footer">
         <p>© StartupPlace 2013</p>
       </div>
