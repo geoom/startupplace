@@ -8,7 +8,7 @@ class Controller_Article extends Controller_Template_Admin {
     {
         parent::before();
 
-        if (Auth::instance()->logged_in() == FALSE) {
+        if ($this->auth->logged_in() == FALSE) {
             $this->request->redirect('dashboard/auth');
         }
 
@@ -16,15 +16,17 @@ class Controller_Article extends Controller_Template_Admin {
     }
 
     public function action_index() {
-        
-        $articles = ORM::factory('article')->find_all(); // loads all article object from table
+        $user = $this->auth->get_user();
+        $articles = ORM::factory('article')
+        ->where("user_id", "=", $user->pk())
+        ->find_all(); 
                 
         $this->template->title = "Art&iacute;culos";
         $this->template->content = View::factory('article/list')
             ->bind('articles', $articles);
     }
     
-    // loads the new article form
+    // show article form  to one new article
     public function action_new() {
         
         $article = new Model_Article();
@@ -34,7 +36,7 @@ class Controller_Article extends Controller_Template_Admin {
             ->bind('article', $article);
     }
     
-    // edit the article
+    // show edit view one article
     public function action_edit() {
         $article_id = $this->request->param('id');
         $article = new Model_Article($article_id);
@@ -44,7 +46,7 @@ class Controller_Article extends Controller_Template_Admin {
             ->bind('article', $article);
     }
 
-    // delete the article
+    // delete one article
     public function action_delete() {
         $article_id = $this->request->param('id');
         $article = new Model_Article($article_id);
@@ -53,11 +55,14 @@ class Controller_Article extends Controller_Template_Admin {
         $this->request->redirect(self::INDEX_PAGE);
     }
     
-    // save the article
+    // save or edit one article
     public function action_post() {
+
+        $user = $this->auth->get_user();
         $article_id = $this->request->param('id');
         $article = new Model_Article($article_id);
         $article->values($this->request->post()); // populate $article object from $_POST array
+        $article->user_id = $user->pk();
         $errors = array();
         
         try {

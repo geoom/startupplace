@@ -44,7 +44,7 @@
                     <?php if($current_section == "articles"){
                       echo "<li class=\"active\">";
                     }else{ echo "<li>";} ?>
-                      <?php echo HTML::anchor("dashboard/articles", "Art&iacute;culos"); ?>
+                      <?php echo HTML::anchor("dashboard/articles", "Mis art&iacute;culos"); ?>
                     </li>
                     <?php  if(Auth::instance()->logged_in('admin')){ ?>
                       <?php if($current_section == "auth"){

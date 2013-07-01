@@ -2,6 +2,8 @@
  
 class Model_Article extends ORM {
     
+    protected $_table_name = "articles";
+
     // contains many relations
     protected $_has_many = array(
         // an article has many comments
@@ -9,6 +11,19 @@ class Model_Article extends ORM {
             'model'     => 'comment',
             'foreign_key'   => 'article_id',
         ),
+    );
+
+    /**
+     * A user has many tokens and roles
+     *
+     * @var array Relationhips
+     */
+    protected $_belongs_to = array (
+        // a article is related to only one user
+        'users' => array (
+            'model'     => 'user',
+            'foreign_key'   => 'user_id'
+        )
     );
 
     /**

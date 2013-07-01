@@ -25,7 +25,7 @@ class Controller_Template_Admin extends Controller_Template {
     {
         parent::before();
 
-        // $this->auth = Auth::instance();
+        $this->auth = Auth::instance();
         // $this->session =  Session::instance();
 
         if ($this->auto_render)
