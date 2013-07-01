@@ -11,7 +11,7 @@ class Controller_Dashboard extends Controller_Template_Admin {
         }
         $this->template->title = 'Panel principal';
         $this->template->current_section = 'index';
-        $this->template->content = 'dashboard index';
+        $this->template->content = View::factory('dashboard-home');
     }
 
 } 

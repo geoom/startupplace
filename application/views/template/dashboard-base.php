@@ -80,7 +80,7 @@
         <!--/.navbar-inner -->
       </div> 
       <!--/.navbar -->
-      <div class="container">
+      <div class="container-fluid">
         <?php echo $content ?>
       </div>
 
