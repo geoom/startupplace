@@ -2,6 +2,13 @@
 
 class Controller_Auth extends Controller_Template_Admin {
 
+    public function before()
+    {
+        parent::before();
+
+        $this->template->current_section = 'auth';
+    }
+
     public function action_index()
     {
         if (Auth::instance()->logged_in()) {

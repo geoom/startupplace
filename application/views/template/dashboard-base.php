@@ -47,7 +47,11 @@
                       <?php echo HTML::anchor("dashboard/articles", "Art&iacute;culos"); ?>
                     </li>
                     <?php  if(Auth::instance()->logged_in('admin')){ ?>
-                      <li><?php echo HTML::anchor("dashboard/auth/register", "Nuevo usuario"); ?></li>
+                      <?php if($current_section == "auth"){
+                        echo "<li class=\"active\">";
+                      }else{ echo "<li>";} ?>
+                        <?php echo HTML::anchor("dashboard/auth/register", "Nuevo usuario"); ?>
+                      </li>
                     <?php } ?>
                     <li><?php echo HTML::anchor("dashboard/auth/logout", "cerrar sesión"); ?></li>
                 <?php } ?>
