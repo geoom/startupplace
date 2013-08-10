@@ -8,7 +8,7 @@ return array
 			'connection' => array
 			(
 				'hostname' => 'localhost',
-				'database' => 'startupplace',
+				'database' => 'sp-data',
 				'username' => 'root',
 				'password' => 'root',
 				'persistent' => FALSE,

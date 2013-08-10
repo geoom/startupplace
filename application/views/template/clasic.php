@@ -4,9 +4,8 @@
 	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title><?php echo $titleMeta ?></title> 
-	<meta name="description" content="<?php echo $description ?>"/>
+	<meta name="description" content="<?php echo $descriptionMeta ?>"/>
 	<meta name="keywords" content="<?php echo $keywords ?>" />
-	<meta name="author" content="<?php echo $author ?>"/>
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -15,7 +14,7 @@
 	
 	<!-- start: Facebook Open Graph -->
 	<meta property="og:title" content="<?php echo $titleMeta ?>"/>
-	<meta property="og:description" content="<?php echo $description ?>"/>
+	<meta property="og:description" content="<?php echo $descriptionMeta ?>"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:url" content="<?php echo $url ?>"/>
 	<meta property="og:image" content="http://startupplace.org/img/logotype.png"/>
@@ -36,10 +35,12 @@
     <![endif]-->
 </head>
 <body>
-
+	
+	<!-- start: page content -->
 	<?php include Kohana::find_file('views/fragment', 'headerforclasic'); ?>
 	<?php echo $content ?>
 	<?php include Kohana::find_file('views/fragment', 'footerforclasic'); ?>
+	<!-- end: page content -->
 
 	<!-- start: Java Script -->
 	<?php foreach ($scripts as $file) echo HTML::script($file), PHP_EOL ?>

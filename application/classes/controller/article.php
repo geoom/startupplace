@@ -22,7 +22,7 @@ class Controller_Article extends Controller_Template_Admin {
         ->find_all(); 
                 
         $this->template->title = "Art&iacute;culos";
-        $this->template->content = View::factory('article/list')
+        $this->template->content = View::factory('article/dashboard/list')
             ->bind('articles', $articles);
     }
     
@@ -32,7 +32,7 @@ class Controller_Article extends Controller_Template_Admin {
         $article = new Model_Article();
         
         $this->template->title = "Nuevo Art&iacute;culo";
-        $this->template->content = View::factory('article/form')
+        $this->template->content = View::factory('article/dashboard/form')
             ->bind('article', $article);
     }
     
@@ -42,7 +42,7 @@ class Controller_Article extends Controller_Template_Admin {
         $article = new Model_Article($article_id);
 
         $this->template->title = "Editar Art&iacute;culo";
-        $this->template->content = View::factory('article/form')
+        $this->template->content = View::factory('article/dashboard/form')
             ->bind('article', $article);
     }
 
@@ -73,7 +73,7 @@ class Controller_Article extends Controller_Template_Admin {
         }
         
         $this->template->title = "Nuevo Art&iacute;culo";
-        $this->template->content = View::factory('article/form')
+        $this->template->content = View::factory('article/dashboard/form')
             ->bind('article', $article)
             ->bind('errors', $errors);
     }
@@ -83,7 +83,7 @@ class Controller_Article extends Controller_Template_Admin {
         $article = ORM::factory('article', $article_id);
 
         $this->template->title = "Ver Art&iacute;culo";
-        $this->template->content = View::factory('article/single')
+        $this->template->content = View::factory('article/dashboard/single')
             ->bind('article', $article);
     }
  
