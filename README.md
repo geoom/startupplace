@@ -1,5 +1,5 @@
-startupplace
-============
+StartupPlace
+==================
 
 The startupplace official site
 
@@ -10,5 +10,3 @@ To install:
 2) site/.htaccess (depending on your structure): RewriteBase /base/site
 
 4) modify application/config/* according to your needs
-
-5) I'll be waiting for your pull request -_-
