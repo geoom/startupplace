@@ -24,9 +24,13 @@ class Controller_Post extends Controller_Template_Clasic {
 	{
 		$article_id = $this->request->param('id');
 		$article = new Model_Article($article_id);
+		
+		$article_author = ORM::Factory("User", $article->user_id);
+		
 		$this->template->titlePage = __($article->title);
   		$this->template->content = View::factory('post')
-  			->bind('article', $article);
+  			->bind('article', $article)
+  			->bind('author', $article_author);
 	}
 
 }

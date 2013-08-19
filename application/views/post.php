@@ -4,7 +4,6 @@
 	<div class="container">
 		<!--start: Row -->
 		<div class="row">
-		
 			<div class="span9">
 				<!-- start: Post -->
 				<div class="post post-page">
@@ -15,9 +14,9 @@
 							</p>
 						</div>
 						<div class="post-meta">
-							<span><i class="mini-ico-calendar"></i>On 1 JUNE, 2011 </span>
-							<span><i class="mini-ico-user"></i>By <a href="#">lucas </a></span>
-							<span><i class="mini-ico-comment"></i><a href="#">89 Comments</a></span>
+							<span><i class="mini-ico-calendar"></i><?php echo $article->time ?> </span>
+							<span><i class="mini-ico-user"></i>Por <a href="#"><?php echo $author->username ?> </a></span>
+							<span><i class="mini-ico-comment"></i><a href="#">3 Comments</a></span>
 						</div>
 					</div>
 				
@@ -58,45 +57,6 @@
 								</div>
 							</div>
 						</li>
-
-						<li>
-							<div class="comments">
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=50" alt="" border="0" /> </div>
-								<div class="comment-des">
-								<div class="comment-by"><strong>Lucas Luck</strong><span class="reply"><span style="color:#aaa">/ </span><a href="#">Reply</a></span> <span class="date">June 1, 2012</span></div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-								</div>
-							 </div>
-						</li>
-						<li>
-							<div class="comments">
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=50" alt="" width="50" height="50" border="0" /> </div>
-								<div class="comment-des">
-								<div class="comment-by"><strong>Lucas Luck</strong><span class="reply"><span style="color:#aaa">/ </span><a href="#">Reply</a></span> <span class="date">June 1, 2012</span></div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-								</div>
-							</div>
-
-							<ol class="childlist">
-								<li>
-									<div class="comments">
-										<div class="avatar">
-											<img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=50" alt="" border="0" />
-										</div>
-										<div class="comment-des">
-											<div class="comment-by">
-												<strong>Lucas Luck</strong>
-												<span class="reply"><span style="color:#aaa">/ </span>
-												<a href="#">Reply</a></span> <span class="date">June 1, 2012</span>
-											</div>
-											<p>
-												Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-											</p>
-										</div>
-									</div>
-								</li>
-							</ol>		
-						</li>
 					</ol>
 
 				</div>
@@ -104,28 +64,7 @@
 				<div class="clear"></div>
 				<!-- start: Comment Add -->
 				<h4>Leave a Comment</h4>
-				<div class="form-spacer"></div>
-				
-				<!-- Form -->
-				<div id="contact-form">
-					<form method="post">
-						<div class="field">
-							<label>Name:</label>
-							<input type="text" class="text" />
-						</div>
-						<div class="field">
-							<label>Email: <span>*</span></label>
-							<input type="text" class="text" />
-						</div>
-						<div class="field">
-							<label>Message: <span>*</span></label>
-							<textarea class="text textarea" ></textarea>
-						</div>
-						<div class="field">
-							<input type="button" id="send" value="Add Comment"/>
-						</div>
-					</form>
-				</div>		
+				<div class="form-spacer"></div>					
 				<!-- end: Comment Add -->
 			</div>	
 			<!-- start: Sidebar -->
