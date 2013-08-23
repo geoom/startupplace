@@ -15,6 +15,25 @@ class Controller_Article extends Controller_Template_Admin {
         $this->template->current_section = 'articles';
     }
 
+    public function after()
+    {
+        $styles = array(
+            'assets/css/vendor/redactor.css' => 'screen',
+            'assets/css/vendor/jquery.spellchecker.min.css' => 'screen',
+        );
+
+        $scripts = array(
+            'assets/js/vendor/jquery.spellchecker.min.js',
+            'assets/js/vendor/redactor.min.js',
+            'assets/js/sp-editor.js',
+        );
+
+        $this->template->extra_styles = array_merge($this->template->extra_styles, $styles);
+        $this->template->extra_scripts = array_merge( $this->template->extra_scripts, $scripts);
+
+        parent::after();
+    }
+
     public function action_index() {
         $user = $this->auth->get_user();
         $articles = ORM::factory('article')

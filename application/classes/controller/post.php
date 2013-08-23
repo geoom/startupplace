@@ -17,7 +17,6 @@ class Controller_Post extends Controller_Template_Clasic {
 		$this->template->descriptionMeta = "Descripcion en meta";
 		$this->template->keywords = "post bla bla bla";
 		$this->template->url = "http://startupplacela.org/post";
-		$this->template->iconClass = "ico-pencil ico-white";
 	}
 
 	public function action_index()

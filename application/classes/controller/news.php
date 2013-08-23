@@ -29,4 +29,15 @@ class Controller_News extends Controller_Template_Clasic {
   			->bind('articles', $articles);
 	}
 
+	public function after(){
+		
+		$scripts = array(	
+			'assets/js/isotope.js',
+		);
+
+		$this->template->extra_scripts = array_merge( $this->template->extra_scripts, $scripts);
+
+		parent::after();
+	}
+
 }

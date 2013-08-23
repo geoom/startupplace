@@ -37,6 +37,8 @@ class Controller_Template_Clasic extends Controller_Template
 			
 			$this->template->styles = array();
 			$this->template->scripts = array(); 
+			$this->template->extra_styles = array(); 
+			$this->template->extra_scripts = array(); 
 		}
 	}
 	 
@@ -70,7 +72,7 @@ class Controller_Template_Clasic extends Controller_Template
 				'assets/js/jquery.cslider.js',
 				'assets/js/fancybox.min.js',
 				'assets/js/imagesloaded.pkgd.min.js',
-				'assets/js/isotope.js',
+				// 'assets/js/isotope.js',
 			);
 	
 			$this->template->styles = array_merge( $this->template->styles, $styles );

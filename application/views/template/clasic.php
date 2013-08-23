@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="<?php echo substr(I18n::$lang, 0, 2); ?>"> 
 <head>
 	<!-- start: Meta -->
@@ -24,6 +24,7 @@
 
 	<!-- start: CSS -->
 	<?php foreach ($styles as $file => $type) echo HTML::style($file, array('media' => $type)), PHP_EOL ?>
+	<?php foreach ($extra_styles as $file => $type) echo HTML::style($file, array('media' => $type)), PHP_EOL ?>
 	<!-- end: CSS -->
 
 	<!-- The icon -->
@@ -44,6 +45,7 @@
 
 	<!-- start: Java Script -->
 	<?php foreach ($scripts as $file) echo HTML::script($file), PHP_EOL ?>
+	<?php foreach ($extra_scripts as $file) echo HTML::script($file), PHP_EOL ?>
 	<script src="<?php echo URL::base(); ?>assets/js/startupplace.min.js" async></script>
 	<!-- end: Java Script -->
 

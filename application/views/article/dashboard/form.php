@@ -18,7 +18,7 @@
                 <div class="control-group">
                     <?php echo Form::label('content', 'Contenido', array('class' => 'control-label','for' => 'inputContent')) ?>
                     <div class="controls">
-                        <?php echo Form::textarea('content', $article->content, array('id'=>'inputContent', 'class' => 'input-block-level', 'placeholder' => 'Describe el artículo')) ?>
+                        <?php echo Form::textarea('content', $article->content, array('id'=>'inputContent', 'class' => 'textarea', 'rows' => '30', 'placeholder' => 'Describe el artículo')) ?>
                         <span class="error"><?php echo Arr::get($errors, 'content');?></span>
                     </div>
                 </div>

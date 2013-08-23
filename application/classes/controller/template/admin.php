@@ -49,6 +49,8 @@ class Controller_Template_Admin extends Controller_Template {
 
             $this->template->styles = array();
             $this->template->scripts = array(); 
+            $this->template->extra_styles = array(); 
+            $this->template->extra_scripts = array();
         }
     }
 
