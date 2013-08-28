@@ -11,7 +11,7 @@
             		<span class="icon-bar"></span>
           		</a>
 				<a class="brand" href="http://www.startupplace.org">
-					<img src="<?php echo URL::base(); ?>assets/img/logotype.png" alt="startupplace"/>
+					<img src="<?php echo URL::base(); ?>assets/img/simpl-logo.png" alt="startupplace"/>
 				</a>
           		<div class="nav-collapse collapse">
             		<ul class="nav">
@@ -25,19 +25,34 @@
 	        			}else{ echo "<li>";} ?>
 	            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
 	            		</li>
-	            		<?php if(Request::current()->uri() == "events" || Request::current()->uri() == "event01" || Request::current()->uri() == "event02"){ 
-	        				echo "<li class=\"active dropdown\">";
-	        			}else{ echo "<li class=\"dropdown\">";} ?>
+	            		<?php if(Request::current()->uri() == "ideastartup"){ 
+                                                echo "<li class=\"active\">";
+                                        }else{ echo "<li>";} ?>
+                                        <a href="<?php echo URL::base(); ?>ideastartup"><?php echo __('IDEASTARTUP')?></a>
+                        </li>
+	            		<?php if(Request::current()->uri() == "events" 
+                                    || Request::current()->uri() == "event01" 
+                                    || Request::current()->uri() == "event02" 
+                                    || Request::current()->uri() == "event03"){ 
+	        				         echo "<li class=\"active dropdown\">";
+	        			        }else{ echo "<li class=\"dropdown\">";} ?>
                 			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
                 			<ul class="dropdown-menu dropdown-limited">
                   				<li>
-                  					<a href="<?php echo URL::base(); ?>event01">
-                  						<p><?php echo __('EVENT01')?></p>
+                  					<a href="<?php echo URL::base(); ?>event03">
+                  						<p><?php echo __('EVENT03')?></p>
                   					</a>
                   				</li>
+                  				<hr class="separation menu-item">
+                            <li>
+                              <a href="<?php echo URL::base(); ?>event02">
+                                <p><?php echo __('EVENT02')?></p>
+                              </a>
+                            </li>
+                            <hr class="separation menu-item">
                   				<li>
-                  					<a href="<?php echo URL::base(); ?>event02">
-                  						<p><?php echo __('EVENT02')?></p>
+                  					<a href="<?php echo URL::base(); ?>event01">
+                  						<p><?php echo __('EVENT01')?></p>
                   					</a>
                   				</li>
                 			</ul>

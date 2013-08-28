@@ -46,9 +46,9 @@
 		<div class="row">
 			<!-- start: About -->
 			<div class="span3">
-				<h3>StartupPlace San Marcos</h3>
+				<h3>StartupPlace</h3>
 				<p>
-					Somos la primera comunidad sanmarquina de emprendedores e innovadores en internet.
+					Somos la primera comunidad universitaria de emprendedores e innovadores en internet.
 				</p>
 			</div>
 			<!-- end: About -->
@@ -69,12 +69,12 @@
 						<div class="social-item">				
 							<div class="social-info-wrap">
 								<div class="social-info">
-									<div class="social-info-front social-twitter">
-										<a href="https://twitter.com/StartupPlace" target="_blank"></a>
+									<div class="social-info-front social-facebook">
+										<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
 									</div>
-									<div class="social-info-back social-twitter-hover">
-										<a href="https://twitter.com/StartupPlace" target="_blank"></a>
-									</div>	
+									<div class="social-info-back social-facebook-hover">
+										<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -83,12 +83,12 @@
 						<div class="social-item">				
 							<div class="social-info-wrap">
 								<div class="social-info">
-									<div class="social-info-front social-facebook">
-										<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
+									<div class="social-info-front social-twitter">
+										<a href="https://twitter.com/StartupPlace" target="_blank"></a>
 									</div>
-									<div class="social-info-back social-facebook-hover">
-										<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
-									</div>
+									<div class="social-info-back social-twitter-hover">
+										<a href="https://twitter.com/StartupPlace" target="_blank"></a>
+									</div>	
 								</div>
 							</div>
 						</div>

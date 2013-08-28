@@ -16,4 +16,5 @@ return array(
 
     'EVENT01' => 'Acepta el reto de ser un emprendedor tecnol&oacute;gico',
     'EVENT02' => 'Pasi&oacute;n por emprender, tecnolog&iacute;a por descubrir',
+    'EVENT03' => 'Startup week university',
 );

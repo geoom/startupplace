@@ -54,7 +54,7 @@
 	            		<span class="icon-bar"></span>
 	          		</a>
 					<a class="brand" href="http://www.startupplace.org">
-						<img src="<?php echo URL::base(); ?>assets/img/logotype.png" alt="startupplace"/>
+						<img src="<?php echo URL::base(); ?>assets/img/simpl-logo.png" alt="startupplace"/>
 					</a>
 	          		<div class="nav-collapse collapse">
 	            		<ul class="nav">
@@ -68,21 +68,33 @@
 		        			}else{ echo "<li>";} ?>
 		            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
 		            		</li>
+		            		<?php if(Request::current()->uri() == "ideastartup"){ 
+                                                echo "<li class=\"active\">";
+                                        }else{ echo "<li>";} ?>
+                                        <a href="<?php echo URL::base(); ?>ideastartup"><?php echo __('IDEASTARTUP')?></a>
+                            </li>
 		            		<?php if(Request::current()->uri() == "events"){ 
 		        				echo "<li class=\"active dropdown\">";
 		        			}else{ echo "<li class=\"dropdown\">";} ?>
 	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
 	                			<ul class="dropdown-menu dropdown-limited">
 	                  				<li>
-                  					<a href="<?php echo URL::base(); ?>event01">
-                  						<p><?php echo __('EVENT01')?></p>
-                  					</a>
-                  				</li>
-                  				<li>
-                  					<a href="<?php echo URL::base(); ?>event02">
-                  						<p><?php echo __('EVENT02')?></p>
-                  					</a>
-                  				</li>
+	                  					<a href="<?php echo URL::base(); ?>event03">
+	                  						<p><?php echo __('EVENT03')?></p>
+	                  					</a>
+	                  				</li>
+	                  				<hr class="separation menu-item">
+	                  				<li>
+	                  					<a href="<?php echo URL::base(); ?>event02">
+	                  						<p><?php echo __('EVENT02')?></p>
+	                  					</a>
+	                  				</li>
+	                  				<hr class="separation menu-item">
+	                  				<li>
+	                  					<a href="<?php echo URL::base(); ?>event01">
+	                  						<p><?php echo __('EVENT01')?></p>
+	                  					</a>
+	                  				</li>
 	                			</ul>
 	              			</li>
 	              			<?php if(Request::current()->uri() == "contact"){ 
@@ -137,10 +149,7 @@
 				<div class="span3">
 					<div class="title"><h3>Informaci&oacute;n</h3></div>
 					<p>
-						<b>StartupPlace San Marcos</b>
-					</p>
-					<p>
-						Universidad Nacional Mayor de San Marcos
+						<b>StartupPlace</b>
 					</p>
 					<p>	
 						Lima, Per&uacute;
@@ -151,46 +160,6 @@
 				</div>
 				<!-- end: Contact Info -->		
 
-				<!-- start: Contact Form >
-				<div class="span4">
-					<div class="title"><h3>Formulario</h3></div>
-
-					<! start: Contact Form >
-					<div id="contact-form">
-
-						<form method="post" action="">
-
-							<fieldset>
-								<div class="clearfix">
-									<label for="name"><span>Nombre:</span></label>
-									<div class="input">
-										<input tabindex="1" size="18" id="name" name="name" type="text" value="">
-									</div>
-								</div>
-
-								<div class="clearfix">
-									<label for="email"><span>Correo electr&oacute;nico:</span></label>
-									<div class="input">
-										<input tabindex="2" size="25" id="email" name="email" type="text" value="" class="input-xlarge">
-									</div>
-								</div>
-
-								<div class="clearfix">
-									<label for="message"><span>Mensaje:</span></label>
-									<div class="input">
-										<textarea tabindex="3" class="input-xlarge" id="message" name="body" rows="7"></textarea>
-									</div>
-								</div>
-
-								<div class="actions">
-									<button tabindex="3" type="submit">Enviar mensaje</button>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-					<! end: Contact Form >
-				</div>
-				<! end: Contact Form -->
 			</div>
 			<!-- end: Row -->
 		</div>
@@ -247,9 +216,9 @@
 			<div class="row">
 				<!-- start: About -->
 				<div class="span3">
-					<h3>StartupPlace San Marcos</h3>
+					<h3>StartupPlace</h3>
 					<p>
-						Somos la primera comunidad sanmarquina de emprendedores e innovadores en internet.
+						Somos la primera comunidad universitaria de emprendedores e innovadores en internet.
 					</p>
 				</div>
 				<!-- end: About -->
@@ -270,12 +239,12 @@
 							<div class="social-item">				
 								<div class="social-info-wrap">
 									<div class="social-info">
-										<div class="social-info-front social-twitter">
-											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
+										<div class="social-info-front social-facebook">
+											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
 										</div>
-										<div class="social-info-back social-twitter-hover">
-											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
-										</div>	
+										<div class="social-info-back social-facebook-hover">
+											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -284,12 +253,12 @@
 							<div class="social-item">				
 								<div class="social-info-wrap">
 									<div class="social-info">
-										<div class="social-info-front social-facebook">
-											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
+										<div class="social-info-front social-twitter">
+											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
 										</div>
-										<div class="social-info-back social-facebook-hover">
-											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
-										</div>
+										<div class="social-info-back social-twitter-hover">
+											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
+										</div>	
 									</div>
 								</div>
 							</div>

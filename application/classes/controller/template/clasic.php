@@ -72,7 +72,6 @@ class Controller_Template_Clasic extends Controller_Template
 				'assets/js/jquery.cslider.js',
 				'assets/js/fancybox.min.js',
 				'assets/js/imagesloaded.pkgd.min.js',
-				// 'assets/js/isotope.js',
 			);
 	
 			$this->template->styles = array_merge( $this->template->styles, $styles );

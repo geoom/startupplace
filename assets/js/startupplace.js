@@ -71,34 +71,14 @@ jQuery(document).ready(function($){
 
 	/* ***************************** Tabs ***************************** */	
 
-		(function() {
+	$('#myTab a').click(function(e) {
+	    e.preventDefault();
+	    $(this).tab('show');
+	})
 
-			var $tabsNav    = $('.tabs-nav'),
-				$tabsNavLis = $tabsNav.children('li'),
-				$tabContent = $('.tab-content');
 
-			$tabsNav.each(function() {
-				var $this = $(this);
 
-				$this.next().children('.tab-content').stop(true,true).hide()
-													 .first().show();
-
-				$this.children('li').first().addClass('active').stop(true,true).show();
-			});
-
-			$tabsNavLis.on('click', function(e) {
-				var $this = $(this);
-
-				$this.siblings().removeClass('active').end()
-					 .addClass('active');
-
-				$this.parent().next().children('.tab-content').stop(true,true).hide()
-															  .siblings( $this.find('a').attr('href') ).fadeIn();
-
-				e.preventDefault();
-			});
-
-		})();
+		// $('#myTab a:last').tab('show');
 		
 			
 });
@@ -113,19 +93,6 @@ jQuery(document).ready(function() {
 
 });
 
-/* **************************** Progress Bar ****************************** */	
-
-jQuery(document).ready(function($){
-	
-	$(".meter > span").each(function() {
-		$(this)
-		.data("origWidth", $(this).width())
-		.width(0)
-		.animate({
-			width: $(this).data("origWidth")
-		}, 1200);
-	});
-});
 
 /* ****************************** Parallax ****************************** */
 
@@ -196,11 +163,11 @@ jQuery(document).ready(function($) {
 
 		  	$optionLinks.click(function(){
 			
-				var $this = $(this);
-				// don't proceed if already selected
-				if ( $this.hasClass('selected') ) {
-			  		return false;
-				}
+			var $this = $(this);
+			// don't proceed if already selected
+			if ( $this.hasClass('selected') ) {
+		  		return false;
+			}
 			var $optionSet = $this.parents('.option-set');
 			$optionSet.find('.selected').removeClass('selected');
 			$this.addClass('selected');
@@ -233,15 +200,19 @@ $(document).ready(function() {
 /***************** go to position config ************************/
 
 	$('a[href^=#]:not([href=#])').click(function() {
-	    var $target = $(this.hash);
-	    $target = $target.length && $target
-	    || $('[name=' + this.hash.slice(1) +']')
-	    if ($target.length) {
-	      var targetOffset = $target.offset().top
-	      $('html,body')
-	      .animate({scrollTop: targetOffset}, 500)
-	      return false;
-	    }
+		widget = $(this).closest('div.widget');
+		console.log(widget.attr("id"));	
+		if(widget.attr("id")=="menuFloatAutomatic"){
+		    var $target = $(this.hash);
+		    $target = $target.length && $target
+		    || $('[name=' + this.hash.slice(1) +']')
+		    if ($target.length) {
+		      var targetOffset = $target.offset().top
+		      $('html,body')
+		      .animate({scrollTop: targetOffset}, 500)
+		      return false;
+		    }
+		}
 	});
 
 /*************** static positon toggle config *******************/

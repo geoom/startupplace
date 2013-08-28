@@ -50,7 +50,7 @@
 	            		<span class="icon-bar"></span>
 	          		</a>
 					<a class="brand" href="http://www.startupplace.org">
-						<img src="<?php echo URL::base(); ?>assets/img/logotype.png" alt="startupplace"/>
+						<img src="<?php echo URL::base(); ?>assets/img/simpl-logo.png" alt="startupplace"/>
 					</a>
 	          		<div class="nav-collapse collapse">
 	            		<ul class="nav">
@@ -64,21 +64,33 @@
 		        			}else{ echo "<li>";} ?>
 		            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
 		            		</li>
+		            		<?php if(Request::current()->uri() == "ideastartup"){ 
+                                                echo "<li class=\"active\">";
+                                        }else{ echo "<li>";} ?>
+                                        <a href="<?php echo URL::base(); ?>ideastartup"><?php echo __('IDEASTARTUP')?></a>
+                            </li>
 		            		<?php if(Request::current()->uri() == "events"){ 
 		        				echo "<li class=\"active dropdown\">";
 		        			}else{ echo "<li class=\"dropdown\">";} ?>
 	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
 	                			<ul class="dropdown-menu dropdown-limited">
 	                  				<li>
-                  					<a href="<?php echo URL::base(); ?>event01">
-                  						<p><?php echo __('EVENT01')?></p>
-                  					</a>
-                  				</li>
-                  				<li>
-                  					<a href="<?php echo URL::base(); ?>event02">
-                  						<p><?php echo __('EVENT02')?></p>
-                  					</a>
-                  				</li>
+	                  					<a href="<?php echo URL::base(); ?>event03">
+	                  						<p><?php echo __('EVENT03')?></p>
+	                  					</a>
+	                  				</li>
+	                  				<hr class="separation menu-item">
+	                  				<li>
+	                  					<a href="<?php echo URL::base(); ?>event02">
+	                  						<p><?php echo __('EVENT02')?></p>
+	                  					</a>
+	                  				</li>
+	                  				<hr class="separation menu-item">
+	                  				<li>
+	                  					<a href="<?php echo URL::base(); ?>event01">
+	                  						<p><?php echo __('EVENT01')?></p>
+	                  					</a>
+	                  				</li>
 	                			</ul>
 	              			</li>
 	              			<?php if(Request::current()->uri() == "contact"){ 
@@ -95,182 +107,251 @@
 		<!--end: Container-->			
 	</header>
 	<!--end: Header-->
-	
-	<!-- start: Slider -->
-	<div class="slider-wrapper">
-
-		<div id="da-slider" class="da-slider">
-			<div class="da-slide">
-				<h2>StartupPlace San Marcos</h2>
-				<p>Bienvenidos a StartupPlace San Marcos la primera comunidad de emprendedores tecnológicos conformada y dirigida por estudiantes sanmarquinos...</p>
-				<a href="<?php echo URL::base(); ?>about" class="da-link">Me interesa</a>
-				<div class="da-img">
-					<img src="<?php echo URL::base();?>assets/img/parallax-slider/logo-cover.png" alt="image01" />
-				</div>
-			</div>
-			<div class="da-slide">
-				<h2>Startup</h2>
-				<p>Pasión por emprender, tecnología por descubrir...</p>
-				<a href="<?php echo URL::base(); ?>event02" class="da-link">Me interesa</a>
-				<div class="da-img">
-					<img src="<?php echo URL::base();?>assets/img/parallax-slider/workshop-cover-02.png" alt="workshop" />
-				</div>			
-			</div>
-			<nav class="da-arrows">
-				<span class="da-arrows-prev"></span>
-				<span class="da-arrows-next"></span>
-			</nav>
-		</div>
-		
-	</div>
-	<!-- end: Slider -->
 			
 	<!--start: Wrapper-->
 	<div id="wrapper">
 				
 		<!--start: Container -->
     	<div class="container">
-			<hr>
-			<!-- start: Row -->
-			<div class="row">
-				<!-- start: Icon Boxes -->
-				<div class="icons-box-vert-container">
-					<!-- start: Icon Box Start -->
-					<div class="span4">
-						<div class="icons-box-vert">
-							<i class="ico-lightbulb ico-white circle-color-full"></i>
-							<div class="icons-box-vert-info">
-								<h3>Desarrolla tu idea</h3>
-								<p>Todos tenemos ideas pero si no tienen acci&oacute;n son in&uacute;tiles, la mayor&iacute;a de tus ideas no garantizan ser geniales hasta que decides contarla a otras personas, aprovechar sus experiencias y sugerencias para mejorar tu idea lo mejor posible.</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<!-- end: Icon Box-->
 
-					<!-- start: Icon Box Start -->
-					<div class="span4">
-						<div class="icons-box-vert">
-							<i class="ico-group ico-white circle-color-full"></i>
-							<div class="icons-box-vert-info">
-								<h3>Conf&iacute;a en tu equipo</h3>
-								<p>Selecciona cuidadosamente a los co-fundadores en base a buenas relaciones y un insuperable compromiso para emprender la aventura, esta es la mejor garant&iacute;a de la supervivencia de tu Startup.</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<!-- end: Icon Box -->
-
-					<!-- start: Icon Box Start -->
-					<div class="span4">
-						<div class="icons-box-vert">
-							<i class="ico-alarm ico-white circle-color-full"></i>
-							<div class="icons-box-vert-info">
-								<h3>Ejecuta r&aacute;pidamente</h3>
-								<p>Construye algo muy simple y lo m&aacute;s significativamente posible como para que los inversionistas entiendan tu idea. El exceso de ingenier&iacute;a puede arruinarte toda la aventura.</p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-					<!-- end: Icon Box -->
-
-				</div>
-				<!-- end: Icon Boxes -->
-				<div class="clear"></div>
-			</div>
-			<!-- end: Row -->
+    		<!-- start: Flexslider -->
+			<div class="slider">
 			
-			<hr>
-			
-			<!-- start: Row -->
-      		<div class="row">
-				<div class="span9 newsletter">
-					<div class="title"><h3>&Uacute;ltimas noticias</h3></div>
-					<!-- start: Row -->
-		      		<div class="row">
-        				<div class="span3">
-							<div class="picture">
-								<a href="<?php echo URL::base(); ?>assets/img/events/13-003/afiche_taller.png" rel="image" title="Startup poster">
-									<img src="<?php echo URL::base(); ?>assets/img/events/13-003/afiche_taller.png">
-									<div class="image-overlay-zoom"></div>
-								</a>
-							</div>
-							<div class="item-description">
-								<h4><a href="<?php echo URL::base(); ?>event02">Startup</a></h4>
-								<p>Pasión por emprender, tecnología por descubrir....</p>
-							</div>
-							<a class="post-entry" href="<?php echo URL::base(); ?>event02">Ver más...</a>
-        				</div>
+				<div id="flex1" class="flexslider">
+					<ul class="slides">
 
-						<div class="span3">
-							<div class="post-img video">
-								<div class="flex-video">
-									<iframe src="http://player.vimeo.com/video/49258882?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-								</div>
-							</div>
-							<div class="item-description">
-								<h4><a href="<?php echo URL::base(); ?>event02">Nubelo</a></h4>
+						<li>
+							<img src="<?php echo URL::base();?>assets/img/slider/slider1.jpg" alt="" />
+							<div class="slide-caption n hidden-phone">
 								<p>
-									Encontrá de forma fácil, segura y gratuita a los profesionales 
-									para cubrir tus necesidades.
+									Ser un emprendedor es vivir unos pocos a&ntilde;os de tu vida como nadie quiere, 
+									de tal forma que puedes disfrutar del resto de tu vida como nadie puede
 								</p>
 							</div>
-		        		</div>
+						</li>
 
-						<div class="span3">
-							<div class="post-img video">
-								<div class="flex-video">
-									<iframe src="http://player.vimeo.com/video/51110850?title=0&amp;byline=0&amp;portrait=0" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
-								</div>
-							</div>
-							<div class="item-description">
-								<h4>
-									<a href="<?php echo URL::base(); ?>event02">Helena App for tablets</a>
-								</h4>
+						<li>
+							<img src="<?php echo URL::base();?>assets/img/slider/slider2.jpg" alt="" />
+						</li>
+
+						<li>
+							<img src="<?php echo URL::base();?>assets/img/slider/slider3.jpg" alt="" />
+							<div class="slide-caption hidden-phone">
 								<p>
-									Helena es una aplicación que permite a las personas ciegas o con 
-									baja visión a usar tabletas utilizando interfaces accesibles basadas 
-									en el tacto, el sonido, la vibración, o la voz.
-								</p>							
+									Un hombre con una nueva idea es un loco hasta que &eacute;sta triunfa.
+								</p>
 							</div>
-						</div>
-        			</div>
-					<!-- end: Row -->
+						</li>
+
+					</ul>
 				</div>
-
-        		<div class="span3">
-        			<!-- start: social -->
-        			<div class="social-container">
-        				<div class="title"><h3>Comparte</h3></div>
-        				<div class="fb-like" data-href="http://www.facebook.com/startupplace" data-send="true" data-layout="box_count" data-width="100" data-show-faces="true"></div>
-        			</div>
-
+			
+			</div>
+			<!-- end: Flexslider -->		
+			<hr>
+			<!-- start: Row -->
+      		<div class="row">
+	
+        		<div class="span4">
+          			<div class="icons-box">
+						<i class="ico-lightbulb ico-white circle-color-full big-color"></i>
+						<div class="title"><h3>Desarrolla tu idea</h3></div>
+						<p>
+							Todos tenemos ideas pero si no tienen acci&oacute;n son in&uacute;tiles, la mayor&iacute;a de tus ideas no garantizan ser geniales hasta que decides contarla a otras personas, aprovechar sus experiencias y sugerencias para mejorar tu idea lo mejor posible.						</p>
+						<div class="clear"></div>
+					</div>
         		</div>
+
+        		<div class="span4">
+          			<div class="icons-box">
+						<i class="ico-group ico-white circle-color-full big-color"></i>
+						<div class="title"><h3>Conf&iacute;a en tu equipo</h3></div>
+						<p>
+							Selecciona cuidadosamente a los co-fundadores en base a buenas relaciones y un insuperable compromiso para emprender la aventura, esta es la mejor garant&iacute;a de la supervivencia de tu Startup.
+						</p>
+						<div class="clear"></div>
+					</div>
+        		</div>
+
+        		<div class="span4">
+          			<div class="icons-box">
+						<i class="ico-alarm ico-white circle-color-full big-color"></i>
+						<div class="title"><h3>Ejecuta r&aacute;pidamente</h3></div>
+						<p>
+							Construye algo muy simple y lo m&aacute;s significativamente posible como para que los inversionistas entiendan tu idea. El exceso de ingenier&iacute;a puede arruinarte toda la aventura.
+						</p>
+						<div class="clear"></div>
+					</div>
+        		</div>
+
       		</div>
 			<!-- end: Row -->
-			<hr>			
-		
-			<!-- start Confian en nosotros
 			<hr>
-			<div class="title"><h2>Conf&iacute;an en nosotros</h2></div>
-			<div class="clients-carousel">
-				<ul class="slides clients">
-					<li><img src="static/img/logos/1.png" alt=""/></li>
-					<li><img src="static/img/logos/2.png" alt=""/></li>	
-					<li><img src="static/img/logos/3.png" alt=""/></li>
-					<li><img src="static/img/logos/4.png" alt=""/></li>
-					<li><img src="static/img/logos/5.png" alt=""/></li>
-					<li><img src="static/img/logos/6.png" alt=""/></li>
-					<li><img src="static/img/logos/7.png" alt=""/></li>
-					<li><img src="static/img/logos/8.png" alt=""/></li>
-					<li><img src="static/img/logos/9.png" alt=""/></li>
-					<li><img src="static/img/logos/10.png" alt=""/></li>		
-				</ul>
-			</div>
-			end Confian en nosotros -->
+			<div class="row">
+				<div class="span9 home-entry">
+					<hr class="separation"/>
+					<div class="row">
+						<div class="span5">
+							<div class="item-description">
+								<h2><a href="<?php echo URL::base(); ?>event03">Startup week university</a></h2>
+								<p>Hemos preparado una serie de eventos sobre emprendimiento tecnológicos 
+									en donde t&uacute; ser&aacute;s parte de una jornada llena de Startups, experiencias, historias
+									,secretos, etc. Todo desarrollado en 5 universidades de Lima 
+									(San Marcos, UNI, UNFV, PUCP, USIL), imposible perd&eacute;rselo (ingreso libre).</p>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="picture">
+								<a href="<?php echo URL::base(); ?>event03" title="Startup poster">
+									<img src="<?php echo URL::base(); ?>assets/img/swu.jpg">
+								</a>
+							</div>
+						</div>
+					</div>
+					<hr class="separation"/>
+					<div class="row">
+						<div class="span5 visible-phone">
+							<div class="item-description">
+								<h2><a href="<?php echo URL::base(); ?>ideastartup">ideaStartup: convierte tu idea en un negocio</a></h2>
+								<p>El programa de desarrollo de emprendedores tecnológicos que hemos 
+									desarrollado para ti, busca ser tu mejor herramienta para construir 
+									una Startup y reducir el riesgo de fallo agrupando un conjunto de 
+									buenas prácticas que te serán indispensable en tu aventura por buscar 
+									un modelo de negocio apropiado.</p>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="picture">
+								<a href="<?php echo URL::base(); ?>ideastartup" title="Startup poster">
+									<img src="<?php echo URL::base(); ?>assets/img/taller.jpg">
+								</a>
+							</div>
+						</div>
+						<div class="span5 hidden-phone">
+							<div class="item-description">
+								<h2><a href="<?php echo URL::base(); ?>ideastartup">ideaStartup: convierte tu idea en un negocio</a></h2>
+								<p>El programa de desarrollo de emprendedores tecnológicos que hemos 
+									desarrollado para ti, busca ser tu mejor herramienta para construir 
+									una Startup y reducir el riesgo de fallo agrupando un conjunto de 
+									buenas prácticas que te serán indispensable en tu aventura por buscar 
+									un modelo de negocio apropiado.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr class="visible-phone"/>
+				<div class="span3">
+					<hr>
+        			<!-- start: social -->
+        			<div class="social-box">
+        				<!-- Start: like in facebook button -->
+        				<div class="item">
+	        				<div class="fb-like" data-href="https://www.facebook.com/StartupPlace" data-width="100" data-show-faces="true" data-send="false"></div>
+	        				<div id="fb-root"></div>
+							<script>(function(d, s, id) {
+							  var js, fjs = d.getElementsByTagName(s)[0];
+							  if (d.getElementById(id)) return;
+							  js = d.createElement(s); js.id = id;
+							  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+							  fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));</script>
+						</div>
+						<!-- End: like in facebook button -->
+        				<hr class="separation">
+        				<!-- Start: follow in twitter button -->
+        				<div class="item">
+							<a href="https://twitter.com/StartupPlace" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @StartupPlace</a>
+        					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        				</div>
+        				<!-- End: follor in twitter button -->
+        				<hr class="separation">
+        				<!-- Start: follow in G+ button -->
+        				<div class="item">
+        					<div class="g-follow" data-annotation="bubble" data-height="24" data-href="https://plus.google.com/101854254152381884237" data-rel="publisher"></div>
+	        				<script type="text/javascript">
+							  window.___gcfg = {lang: 'es-419'};
 
-		</div>
-		<!--end: Container-->
+							  (function() {
+							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							    po.src = 'https://apis.google.com/js/plusone.js';
+							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							  })();
+							</script>
+        				</div>
+						<!-- End: follor in G+ button -->
+
+						<!-- Start: follow in Youtube button -->
+						<hr class="separation">
+						<div class="item">
+							<script src="https://apis.google.com/js/plusone.js"></script>
+							<div class="g-ytsubscribe" data-channel="startupplace" data-layout="full"></div>
+	        			</div>
+	        			<!-- End: follow in Youtube button -->
+	        		</div>
+				</div>
+				<hr/>
+				<!-- start: Row -->
+	      		<div class="row">
+					<div class="span9 newsletter">
+						<div class="title"><h3>Otras historias</h3></div>
+						<!-- start: Row -->
+			      		<div class="row">
+	        				<div class="span3">
+								<div class="picture">
+									<a href="<?php echo URL::base(); ?>assets/img/events/13-003/afiche_taller.png" rel="image" title="Startup poster">
+										<img src="<?php echo URL::base(); ?>assets/img/events/13-003/afiche_taller.png">
+										<div class="image-overlay-zoom"></div>
+									</a>
+								</div>
+								<div class="item-description">
+									<h4><a href="<?php echo URL::base(); ?>event02">Startup</a></h4>
+									<p>Pasión por emprender, tecnología por descubrir....</p>
+								</div>
+								<a class="post-entry" href="<?php echo URL::base(); ?>event02">Ver m&aacute;s...</a>
+	        				</div>
+
+							<div class="span3">
+								<div class="post-img video">
+									<div class="flex-video">
+										<iframe src="http://player.vimeo.com/video/49258882?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+									</div>
+								</div>
+								<div class="item-description">
+									<h4><a href="<?php echo URL::base(); ?>event02">Nubelo</a></h4>
+									<p>
+										Encontr&aacute; de forma f&aacute;cil, segura y gratuita a los profesionales 
+										para cubrir tus necesidades.
+									</p>
+								</div>
+			        		</div>
+
+							<div class="span3">
+								<div class="post-img video">
+									<div class="flex-video">
+										<iframe src="http://player.vimeo.com/video/51110850?title=0&amp;byline=0&amp;portrait=0" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+									</div>
+								</div>
+								<div class="item-description">
+									<h4>
+										<a href="<?php echo URL::base(); ?>event02">Helena App for tablets</a>
+									</h4>
+									<p>
+										Helena es una aplicación que permite a las personas ciegas o con 
+										baja visión a usar tabletas utilizando interfaces accesibles basadas 
+										en el tacto, el sonido, la vibración, o la voz.
+									</p>							
+								</div>
+							</div>
+	        			</div>
+						<!-- end: Row -->
+					</div>
+
+	      		</div>
+				<!-- end: Row -->
+				<hr>			
+
+			</div>
+			<!--end: Container-->
 	</div>
 	<!-- end: Wrapper  -->			
 
@@ -322,9 +403,9 @@
 			<div class="row">
 				<!-- start: About -->
 				<div class="span3">
-					<h3>StartupPlace San Marcos</h3>
+					<h3>StartupPlace</h3>
 					<p>
-						Somos la primera comunidad sanmarquina de emprendedores e innovadores en internet.
+						Somos la primera comunidad universitaria de emprendedores e innovadores en internet.
 					</p>
 				</div>
 				<!-- end: About -->
@@ -345,12 +426,12 @@
 							<div class="social-item">				
 								<div class="social-info-wrap">
 									<div class="social-info">
-										<div class="social-info-front social-twitter">
-											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
+										<div class="social-info-front social-facebook">
+											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
 										</div>
-										<div class="social-info-back social-twitter-hover">
-											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
-										</div>	
+										<div class="social-info-back social-facebook-hover">
+											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -359,12 +440,12 @@
 							<div class="social-item">				
 								<div class="social-info-wrap">
 									<div class="social-info">
-										<div class="social-info-front social-facebook">
-											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
+										<div class="social-info-front social-twitter">
+											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
 										</div>
-										<div class="social-info-back social-facebook-hover">
-											<a href="https://www.facebook.com/StartupPlace" target="_blank"></a>
-										</div>
+										<div class="social-info-back social-twitter-hover">
+											<a href="https://twitter.com/StartupPlace" target="_blank"></a>
+										</div>	
 									</div>
 								</div>
 							</div>
@@ -435,15 +516,7 @@
 	<?php foreach ($scripts as $file) echo HTML::script($file), PHP_EOL ?>
 	<script src="<?php echo URL::base(); ?>assets/js/startupplace.min.js" async></script>
 	<!-- end: Java Script -->
-
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-38384370-1']);

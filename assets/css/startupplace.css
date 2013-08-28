@@ -1,4 +1,4 @@
-
+	
 /* Import Section
 =================================================================== */
 @import url("icons.css");				/* Icons. */
@@ -58,12 +58,19 @@ h6 {
 }
 
 hr {
-  margin: 20px 0;
+  margin: 10px 0;
   border: 0;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 
+hr.separation{
+	border-top: 1px solid #eeeeee;
+}
+
+hr.separation.menu-item{
+	margin: 1px 0;
+}
 			
 .title {
 	border-bottom: 3px double #f6f6f6;
@@ -287,8 +294,8 @@ header {
 =================================================================== */
 .picture {
 	position: relative;
-
-	}
+	border: 1px solid #ccc;
+}
 	
 .picture .item-description {
 	padding: 5px 15px;
@@ -614,6 +621,10 @@ html[xmlns] .slides {display: block;}
 .icons-box i.circle-color-full {
 	float: none !important;
 	margin: 0 auto !important;
+}
+
+.icons-box .title{
+	margin-top: 10px;
 }
 
 .circle {
@@ -997,7 +1008,11 @@ input[type="button"] {
 	box-shadow:  0px 1px 1px 0px rgba(180, 180, 180, 0.1);
 }
 
-.tab-content {padding: 20px;}
+.post-page .tab-content {padding: 20px 0;}
+
+.post-page .nav-tabs {
+	border-bottom: 1px solid #ddd !important;
+}
 
 
 /* Progress Bar
@@ -2422,6 +2437,38 @@ ul.event_post{
 	padding: 0 0 0 16px;
 }
 
+.home-entry h2{
+	font-size: 22px;
+	line-height: 25px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.home-entry p{
+	font-size: 17px;
+	margin: 10px 35px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.home-entry .picture{
+	border: 1px solid #ccc;
+	vertical-align: baseline;
+	border-radius: 50% / 20px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 5px 10px;
+	clip: rect(12px, auto, 24px, 0);
+}
+
+.social-box{
+	background-color: #f8f8f8;
+	border: 1px solid #e5e5e5;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.social-box .item{
+	text-align: center;
+}
 
 
 
