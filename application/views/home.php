@@ -110,16 +110,12 @@
 			
 	<!--start: Wrapper-->
 	<div id="wrapper">
-				
 		<!--start: Container -->
     	<div class="container">
-
     		<!-- start: Flexslider -->
 			<div class="slider">
-			
 				<div id="flex1" class="flexslider">
 					<ul class="slides">
-
 						<li>
 							<img src="<?php echo URL::base();?>assets/img/slider/slider1.jpg" alt="" />
 							<div class="slide-caption n hidden-phone">

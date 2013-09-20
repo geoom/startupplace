@@ -22,6 +22,7 @@ class Controller_Post extends Controller_Template_Clasic {
 	public function action_index()
 	{
 		$article_id = $this->request->param('id');
+		
 		$article = new Model_Article($article_id);
 		
 		$article_author = ORM::Factory("User", $article->user_id);

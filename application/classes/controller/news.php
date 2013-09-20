@@ -22,11 +22,32 @@ class Controller_News extends Controller_Template_Clasic {
 
 	public function action_index()
 	{
-		$articles = ORM::factory('article')
+		$article_id = $this->request->param('id');
+
+		if(String::isNotEmpty($article_id)){
+		
+			$article = new Model_Article($article_id);
+
+			if ( ! $article->loaded())
+				throw new Kohana_Exception('That article does not exist (:name)'
+											, array(':name'=>$article_id)
+											, 404
+										);
+
+			$article_author = ORM::Factory("User", $article->user_id);
+			
+			$this->template->titlePage = __($article->title);
+	  		$this->template->content = View::factory('post')
+	  			->bind('article', $article)
+	  			->bind('author', $article_author);
+
+		}else{
+			$articles = ORM::factory('article')
 			->find_all();
 
-  		$this->template->content = View::factory('news')
+			$this->template->content = View::factory('news')
   			->bind('articles', $articles);
+		}
 	}
 
 	public function after(){

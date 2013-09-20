@@ -17,12 +17,11 @@ Route::set('admin', 'dashboard(/<controller>(/<action>))')
 		'action'     => 'index',
 	));
 
-Route::set('blog', 'posts(/<id>)')
+Route::set('blog', 'news(/<id>)')
 	->defaults(array(
-		'controller' => 'post', 
+		'controller' => 'news', 
 		'action'     => 'index',
 	));
-
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
