@@ -52,6 +52,13 @@ class Model_Article extends ORM {
             'content'       => 'Content nice label',
         );
     }
+
+    public static function getBySlug($slug){
+        $article = ORM::factory('article')
+            ->where('slug', '=', trim($slug))
+            ->find();
+        return $article;
+    }
  
 
 }

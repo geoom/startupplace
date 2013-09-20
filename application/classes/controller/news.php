@@ -14,7 +14,7 @@ class Controller_News extends Controller_Template_Clasic {
 		parent::before();
 		$this->template->titleMeta = "Titulo de este post | StartupPlace";
 		$this->template->titlePage = __('Historias mas importantes');
-		$this->template->descriptionMeta = "Descripcion en meta";
+		$this->template->descriptionMeta = "Desscripcion en meta";
 		$this->template->keywords = "post bla bla bla";
 		$this->template->url = "http://startupplacela.org/news";
 		$this->template->iconClass = "ico-pencil ico-white";
@@ -22,15 +22,15 @@ class Controller_News extends Controller_Template_Clasic {
 
 	public function action_index()
 	{
-		$article_id = $this->request->param('id');
+		$article_slug = $this->request->param('slug');
 
-		if(String::isNotEmpty($article_id)){
+		if(String::isNotEmpty($article_slug)){
 		
-			$article = new Model_Article($article_id);
+			$article = Model_Article::getBySlug($article_slug);
 
 			if ( ! $article->loaded())
 				throw new Kohana_Exception('That article does not exist (:name)'
-											, array(':name'=>$article_id)
+											, array(':name'=>$article_slug)
 											, 404
 										);
 

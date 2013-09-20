@@ -5,7 +5,7 @@
  * defaults for the URI.
  */
 
-Route::set('articles', 'dashboard/articles(/<action>(/<id>))')
+Route::set('admin/articles', 'dashboard/articles(/<action>(/<id>))')
 	->defaults(array(
 		'controller' => 'article',
 		'action'     => 'index',
@@ -17,7 +17,7 @@ Route::set('admin', 'dashboard(/<controller>(/<action>))')
 		'action'     => 'index',
 	));
 
-Route::set('blog', 'news(/<id>)')
+Route::set('news', 'news(/<slug>)')
 	->defaults(array(
 		'controller' => 'news', 
 		'action'     => 'index',

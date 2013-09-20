@@ -101,3 +101,6 @@ CREATE TABLE IF NOT EXISTS `comments` (
   KEY `fk_comments_article` (`article_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
  
+/*migrations*/
+
+ALTER TABLE articles add column `slug` varchar(200) DEFAULT NULL AFTER  `title`;

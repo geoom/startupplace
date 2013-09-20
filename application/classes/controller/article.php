@@ -76,12 +76,15 @@ class Controller_Article extends Controller_Template_Admin {
     
     // save or edit one article
     public function action_post() {
-
+        Log::instance()->add(Log::DEBUG,
+                    'Executing Controller_Article::action_post');
         $user = $this->auth->get_user();
         $article_id = $this->request->param('id');
         $article = new Model_Article($article_id);
         $article->values($this->request->post()); // populate $article object from $_POST array
         $article->user_id = $user->pk();
+        $article->slug = Slug::ify($article->title);
+        Log::instance()->add(Log::NOTICE, $article->slug);
         $errors = array();
         
         try {
