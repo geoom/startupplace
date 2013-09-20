@@ -12,7 +12,7 @@ class Controller_Event03 extends Controller_Template_Clasic {
 	public function action_index()
 	{
 		$this->template->titleMeta = "Startup week university | StartupPlace";
-		$this->template->titlePage = __('EVENT03');
+		$this->template->titlePage = "Startup week university";
 		$this->template->descriptionMeta = "Startup week university";
 		$this->template->keywords = "startup week university";
 		$this->template->url = "http://startupplace.org/event03";

@@ -13,7 +13,7 @@ class Controller_News extends Controller_Template_Clasic {
 	{
 		parent::before();
 		$this->template->titleMeta = "Titulo de este post | StartupPlace";
-		$this->template->titlePage = __('Historias mas importantes');
+		$this->template->titlePage = "Historias tecnol&oacute;gicas";
 		$this->template->descriptionMeta = "Desscripcion en meta";
 		$this->template->keywords = "post bla bla bla";
 		$this->template->url = "http://startupplacela.org/news";

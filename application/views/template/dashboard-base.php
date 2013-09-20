@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="<?php echo substr(I18n::$lang, 0, 2); ?>"> 
+<html lang="es"> 
 <head>
     <!-- start: Meta -->
     <meta charset="utf-8">

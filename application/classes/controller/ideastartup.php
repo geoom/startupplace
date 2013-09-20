@@ -12,7 +12,7 @@ class Controller_Ideastartup extends Controller_Template_Clasic {
 	public function action_index()
 	{
 		$this->template->titleMeta = "ideaStartup | StartupPlace";
-		$this->template->titlePage = __('IDEASTARTUP');
+		$this->template->titlePage =  "ideaStartup";
 		$this->template->descriptionMeta = "El programa de desarrollo emprendedores tecnol&oacute;gicoso de StartupPlace";
 		$this->template->keywords = "evento startupplace, acepta el reto";
 		$this->template->url = "http://startupplace.org/ideastartup";

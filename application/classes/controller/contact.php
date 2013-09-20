@@ -31,11 +31,7 @@ class Controller_Contact extends Controller_Template {
 
 		if ($this->auto_render)
 		{
-			// keep the last url if it's not home/language
-			if(Request::current()->action() != 'language') {
-				Session::instance()->set('controller', Request::current()->uri());
-			}
-			
+			Session::instance()->set('controller', Request::current()->uri());
 			// Initialize empty values
 			$this->template->title   = '';
 			$this->template->content = '';

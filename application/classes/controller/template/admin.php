@@ -32,10 +32,7 @@ class Controller_Template_Admin extends Controller_Template {
         {   
             $this->template->logged_in = FALSE;
 
-            // keep the last url if it's not home/language
-            if(Request::current()->action() != 'language') {
-                Session::instance()->set('controller', Request::current()->uri());
-            }
+            Session::instance()->set('controller', Request::current()->uri());
             
             if (Auth::instance()->logged_in())
             {

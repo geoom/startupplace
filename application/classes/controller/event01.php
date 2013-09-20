@@ -12,7 +12,7 @@ class Controller_Event01 extends Controller_Template_Clasic {
 	public function action_index()
 	{
 		$this->template->titleMeta = "STARTUP: Acepta el reto de ser un emprendedor tecnol&oacute;gico | StartupPlace";
-		$this->template->titlePage = __('EVENT01');
+		$this->template->titlePage = "Acepta el reto de ser un emprendedor tecnol&oacute;gico";
 		$this->template->descriptionMeta = "Acepta el reto de ser un emprendedor tecnol&oacute;gico";
 		$this->template->keywords = "evento startupplace, acepta el reto";
 		$this->template->url = "http://startupplace.org/event01";
