@@ -7,15 +7,15 @@
  * @category   Blog
  * @author     George Mejia
  */
-class Controller_News extends Controller_Template_Clasic {
+class Controller_News extends Controller_Template_Standard {
 
 	public function before()
 	{
 		parent::before();
-		$this->template->titleMeta = "Titulo de este post | StartupPlace";
-		$this->template->titlePage = "Historias tecnol&oacute;gicas";
-		$this->template->descriptionMeta = "Desscripcion en meta";
-		$this->template->keywords = "post bla bla bla";
+		$this->template->titleMeta = " | StartupPlace";
+		$this->template->titlePage = "";
+		$this->template->descriptionMeta = "";
+		$this->template->keywords = "";
 		$this->template->url = "http://startupplacela.org/news";
 		$this->template->iconClass = "ico-pencil ico-white";
 	}
@@ -33,7 +33,14 @@ class Controller_News extends Controller_Template_Clasic {
 											, array(':name'=>$article_slug)
 											, 404
 										);
+			// meta info
+			$this->template->titleMeta = $article->title . " | StartupPlace";
+			$this->template->titlePage = $article->title;
+			$this->template->descriptionMeta = "";
+			$this->template->keywords = "noticias, startups";
+			$this->template->url = "http://startupplacela.org/news/".$article->slug;
 
+			$article->time = date('d-m-Y H:i', strtotime($article->time));
 			$article_author = ORM::Factory("User", $article->user_id);
 			
 			$this->template->titlePage = __($article->title);
@@ -42,7 +49,16 @@ class Controller_News extends Controller_Template_Clasic {
 	  			->bind('author', $article_author);
 
 		}else{
+
+			$this->template->titleMeta = "Historias tecnol&oacute;gicas | StartupPlace";
+			$this->template->titlePage = "Historias tecnol&oacute;gicas";
+			$this->template->descriptionMeta = "Las historias y noticias m&aacute;s tocadas en el mundo del emprendimiento, actualidad sobre el mundo de las startups";
+			$this->template->keywords = "artículos, tecnolog&iacute;a, startups, noticias";
+			$this->template->url = "http://startupplacela.org/news";
+			$this->template->iconClass = "ico-pencil ico-white";
+
 			$articles = ORM::factory('article')
+			->order_by('id', 'desc')
 			->find_all();
 
 			$this->template->content = View::factory('news')
@@ -54,6 +70,7 @@ class Controller_News extends Controller_Template_Clasic {
 		
 		$scripts = array(	
 			'assets/js/isotope.js',
+			'assets/js/vendor/moment+langs.min.js'
 		);
 
 		$this->template->extra_scripts = array_merge( $this->template->extra_scripts, $scripts);

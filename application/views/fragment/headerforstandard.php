@@ -91,15 +91,3 @@
 	<!--end: Container-->			
 </header>
 <!--end: Header-->
-
-<!-- start: Page Title -->
-<div id="page-title">
-	<div id="page-title-inner">
-		<!-- start: Container -->
-		<div class="container">
-			<h2><i class="<?php echo $iconClass ?>"></i><?php echo $titlePage ?></h2>
-		</div>
-		<!-- end: Container  -->
-	</div>	
-</div>
-<!-- end: Page Title -->

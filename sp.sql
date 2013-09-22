@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `roles_users` (
   KEY `fk_role_id` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `roles_users` VALUES (2,1),(3,1),(1,1),(1,2);
+INSERT INTO `roles_users` VALUES (1,1),(2,1),(3,1),(4,1),(1,2);
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -37,9 +37,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `uniq_email` (`email`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-INSERT INTO `users` VALUES (1,'gmejia.fisi@gmail.com','admin','7946857292192c72dd10478103751b97b4f3716f761025591d53b7ff402b2de8',1,1371956952)
+INSERT INTO `users` VALUES (1,'admin@email.com','spadmin','2d80b726928d4b3de973797a3124eff8f5c79075822e1872de92933b8ed8d7f1',0,NULL)
                           ,(2,'sadsad@sdkjjfdsf.com','gmejia','2d9840109084f29f671068db63642695ccd1822945a6cceca0b7f9dec5d3c7da',2,1371957643)
-                          ,(3,'sadssssad@sdkjjfdsf.com','user','3b5e6d4e40e38532746584bb1609192179631d413e4875ad79db16a8a58dd01d',2,1371957651);
+                          ,(3,'sincorreo@email.com','oscarroman','bf8f59e1967ed16f963c366a2306b4090c673823984e7fed2f56a9d33d7d556a',0,NULL)
+                          ,(4,'sincorreo2@email.com','angel','0edc99dd2050e6c4022b458bf5e29f72989c07f2f081da12c889f85d43d4d311',0,NULL);
 
 DROP TABLE IF EXISTS `user_tokens`;
 CREATE TABLE IF NOT EXISTS `user_tokens` (

@@ -37,7 +37,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#" name="top">StartupPlace dashboard</a>
+            <a class="brand" href="<?php echo URL::base(); ?>dashboard" name="top">StartupPlace dashboard</a>
             <div class="nav-collapse collapse">
               <?php if($logged_in){ ?>
               <ul class="nav">

@@ -1,3 +1,9 @@
+<!-- start: Page Title -->
+<div id="page-title">
+	<div id="page-title-inner" style="padding: 3px">
+	</div>	
+</div>
+<!-- end: Page Title -->
 <!--start: Wrapper-->
 <div id="wrapper">
 	<!--start: Container -->
@@ -8,80 +14,50 @@
 				<!-- start: Post -->
 				<div class="post post-page">
 					<div class="post-content">
+						<div class="post-title">
+								<h1><?php echo $article->title ?></h1>
+							</div>
+						<div class="post-meta">
+							<span><i class="mini-ico-calendar"></i><?php echo $article->time ?> </span>
+							<span><i class="mini-ico-user"></i>Por <a href="#"><?php echo $author->username ?> </a></span>
+						</div>
 						<div class="post-description">
 							<p>
 								<?php echo $article->content ?>
 							</p>
 						</div>
-						<div class="post-meta">
-							<span><i class="mini-ico-calendar"></i><?php echo $article->time ?> </span>
-							<span><i class="mini-ico-user"></i>Por <a href="#"><?php echo $author->username ?> </a></span>
-							<span><i class="mini-ico-comment"></i><a href="#">3 Comments</a></span>
-						</div>
 					</div>
 				
 				</div>
 				<!-- end: Post -->
+				<div style="height: 20px"></div>
 				<!-- start: Comments -->
-				<h4>Comments <span class="comments-amount">(12)</span></h4>
 				<div class="comments-sec">
-					<ol class="commentlist">
-						<li>
-							<div class="comments">
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=50" alt="" width="50" height="50" border="0" /> </div>
-								<div class="comment-des">
-								<div class="comment-by"><strong>Lucas Luck</strong><span class="reply"><span style="color:#aaa">/ </span><a href="#">Reply</a></span> <span class="date">June 1, 2012</span></div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-								</div>
-							</div>
+					<div id="disqus_thread"></div>
+				    <script type="text/javascript">
+				        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				        var disqus_shortname = 'startupplace'; // required: replace example with your forum shortname
 
-							<ol class="childlist">
-								<li>
-								<div class="comments">
-													<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=50" alt="" border="0" /> </div>
-									<div class="comment-des">
-								<div class="comment-by"><strong>Lucas Luck</strong><span class="reply"><span style="color:#aaa">/ </span><a href="#">Reply</a></span> <span class="date">June 1, 2012</span></div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-									</div>
-								</div>
-								</li>
-							</ol>		
-						</li>
-
-						<li>
-							<div class="comments">
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=50" alt="" border="0" /> </div>
-								<div class="comment-des">
-								<div class="comment-by"><strong>Lucas Luck</strong><span class="reply"><span style="color:#aaa">/ </span><a href="#">Reply</a></span> <span class="date">June 1, 2012</span></div>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-								</div>
-							</div>
-						</li>
-					</ol>
-
+				        /* * * DON'T EDIT BELOW THIS LINE * * */
+				        (function() {
+				            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				        })();
+				    </script>
+				    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 				</div>
 				<!-- end: Comments -->
 				<div class="clear"></div>
-				<!-- start: Comment Add -->
-				<h4>Leave a Comment</h4>
-				<div class="form-spacer"></div>					
-				<!-- end: Comment Add -->
 			</div>	
 			<!-- start: Sidebar -->
 			<div class="span3 hidden-phone">
-				<!-- start: Sidebar Menu -->
-				<div class="widget">
-					<div class="title"><h3>Menu</h3></div>
-					<ul class="links-list-alt">
-						<li><a href="full_width.html">Item one</a></li>
-					</ul>
-				</div>
-				<!-- end: Sidebar Menu -->
 				<!-- start: Tags -->
 				<div class="widget">
 					<div class="title"><h3>Tags</h3></div>
 					<div class="tags">
-						<a href="#">No tag</a>
+						<a href="#">Sin tag</a>
 					</div>
 				</div>
 				<!-- end: Tags -->

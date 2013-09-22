@@ -1,6 +1,6 @@
 <div clas="row">
 	<div class="span4">
-		<a href="articles/new" class="btn btn-primary"><i class="icon-pencil icon-white"></i> Nuevo art&iacute;culo</a>
+		<a href="<?php echo URL::base(); ?>dashboard/articles/new" class="btn btn-primary"><i class="icon-pencil icon-white"></i> Nuevo art&iacute;culo</a>
 	</div>
 </div>
 <br/><br/><br/>
@@ -11,10 +11,6 @@
 			<a href="<?php echo URL::base(); ?>dashboard/articles/edit/<?php echo $article->id ?>" class="btn btn-mini"><i class="icon-edit"></i> <strong>Editar</strong></a>
 			<a href="<?php echo URL::base(); ?>dashboard/articles/delete/<?php echo $article->id ?>" class="btn btn-mini"><i class="icon-trash"></i> <strong>Eliminar</strong></a>
 			<h1><?php echo $article->title; ?></h1>
-		    <p><?php echo $article->content; ?></p>
-		    <div>
-		        <span class="badge badge-success">Posted 2012-08-02 20:47:04</span><div class="pull-right"><span class="label">alice</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span></div>
-		    </div> 
 		    <hr>
 		<?php endforeach; ?>
 	</div>
