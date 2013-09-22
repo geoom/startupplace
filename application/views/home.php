@@ -49,55 +49,69 @@
 	            		<span class="icon-bar"></span>
 	            		<span class="icon-bar"></span>
 	          		</a>
-					<a class="brand" href="http://www.startupplace.org">
+					<a class="brand" href="<?php echo URL::base(); ?>">
 						<img src="<?php echo URL::base(); ?>assets/img/simpl-logo.png" alt="startupplace"/>
 					</a>
 	          		<div class="nav-collapse collapse">
 	            		<ul class="nav">
-		        			<?php if(Request::current()->uri() == "/"){ 
-		        				echo "<li class=\"active\">";
-		        			}else{ echo "<li>";} ?>
-		            			<a href="<?php echo URL::base(); ?>"><?php echo __('HOME')?></a>
+	                  <?php if(Request::current()->uri() == "/"){ 
+	  	        				       echo "<li class=\"active\">";
+	  	        			      }else{ echo "<li>";} 
+	                  ?>
+		            			<a href="<?php echo URL::base(); ?>">Inicio</a>
 		            		</li>
+
 		            		<?php if(Request::current()->uri() == "about"){ 
-		        				echo "<li class=\"active\">";
-		        			}else{ echo "<li>";} ?>
-		            			<a href="<?php echo URL::base(); ?>about"><?php echo __('ABOUT')?></a>
+	                          echo "<li class=\"active\">";
+		        			        }else{ echo "<li>";} 
+	                  ?>
+		            			<a href="<?php echo URL::base(); ?>about">Sobre nosotros</a>
 		            		</li>
+
 		            		<?php if(Request::current()->uri() == "ideastartup"){ 
-                                                echo "<li class=\"active\">";
-                                        }else{ echo "<li>";} ?>
-                                        <a href="<?php echo URL::base(); ?>ideastartup"><?php echo __('IDEASTARTUP')?></a>
-                            </li>
-		            		<?php if(Request::current()->uri() == "events"){ 
-		        				echo "<li class=\"active dropdown\">";
-		        			}else{ echo "<li class=\"dropdown\">";} ?>
-	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('EVENTS')?><b class="caret"></b></a>
+	                          echo "<li class=\"active\">";
+	                        }else{ echo "<li>";} 
+	                  ?>
+	                    <a href="<?php echo URL::base(); ?>ideastartup">ideaStartup</a>
+	                  </li>
+
+		            		<?php if(Request::current()->uri() == "events" 
+	                                    || Request::current()->uri() == "event01" 
+	                                    || Request::current()->uri() == "event02" 
+	                                    || Request::current()->uri() == "event03"){ 
+		        				         echo "<li class=\"active dropdown\">";
+		        			        }else{ echo "<li class=\"dropdown\">";} 
+	                  ?>
+	                			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventos
+	                        <b class="caret"></b>
+	                      </a>
 	                			<ul class="dropdown-menu dropdown-limited">
 	                  				<li>
 	                  					<a href="<?php echo URL::base(); ?>event03">
-	                  						<p><?php echo __('EVENT03')?></p>
+	                  						<p>Startup week university</p>
 	                  					</a>
 	                  				</li>
 	                  				<hr class="separation menu-item">
-	                  				<li>
-	                  					<a href="<?php echo URL::base(); ?>event02">
-	                  						<p><?php echo __('EVENT02')?></p>
-	                  					</a>
-	                  				</li>
-	                  				<hr class="separation menu-item">
+	                            <li>
+	                              <a href="<?php echo URL::base(); ?>event02">
+	                                <p>Pasi&oacute;n por emprender, tecnolog&iacute;a por descubrir</p>
+	                              </a>
+	                            </li>
+	                            <hr class="separation menu-item">
 	                  				<li>
 	                  					<a href="<?php echo URL::base(); ?>event01">
-	                  						<p><?php echo __('EVENT01')?></p>
+	                  						<p>Acepta el reto de ser un emprendedor tecnol&oacute;gico</p>
 	                  					</a>
 	                  				</li>
 	                			</ul>
-	              			</li>
-	              			<?php if(Request::current()->uri() == "contact"){ 
-		        				echo "<li class=\"active\">";
-		        			}else{ echo "<li>";} ?>
-	              				<a href="<?php echo URL::base(); ?>contact"><?php echo __('CONTACT')?></a>
-	              			</li>
+	              		</li>
+
+	              		<?php if(Request::current()->uri() == "contact"){ 
+		        				        echo "<li class=\"active\">";
+		        			        }else{ echo "<li>";} 
+	                  ?>
+	              			<a href="<?php echo URL::base(); ?>contact">Contacto</a>
+	              		</li>
 	            		</ul>
 	          		</div>
 	        	</div>
