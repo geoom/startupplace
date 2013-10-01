@@ -70,7 +70,8 @@ class Controller_News extends Controller_Template_Standard {
 		
 		$scripts = array(	
 			'assets/js/isotope.js',
-			'assets/js/vendor/moment+langs.min.js'
+			'assets/js/vendor/moment+langs.min.js',
+			'assets/js/fancybox.min.js'
 		);
 
 		$this->template->extra_scripts = array_merge( $this->template->extra_scripts, $scripts);

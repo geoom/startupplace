@@ -10,7 +10,7 @@
 	<div class="container">
 		<!--start: Row -->
 		<div class="row">
-			<div class="span9">
+			<div class="span8 offset2">
 				<!-- start: Post -->
 				<div class="post post-page">
 					<div class="post-content">
@@ -51,18 +51,6 @@
 				<!-- end: Comments -->
 				<div class="clear"></div>
 			</div>	
-			<!-- start: Sidebar -->
-			<div class="span3 hidden-phone">
-				<!-- start: Tags -->
-				<div class="widget">
-					<div class="title"><h3>Tags</h3></div>
-					<div class="tags">
-						<a href="#">Sin tag</a>
-					</div>
-				</div>
-				<!-- end: Tags -->
-			</div>
-			<!-- end: Sidebar -->
 	</div>
 	<!--end: Container-->
 </div>
