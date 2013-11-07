@@ -29,6 +29,12 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
 		'action'     => 'index',
 	));
 
+Route::set('preview', 'files/<filename>', array('filename' => '.+'))
+	->defaults(array(
+		'controller' => 'files',
+		'action'     => 'preview',
+));
+
 Route::set('error', 'error/<action>(/<message>)', array('action' => '[0-9]++', 'message' => '.+'))
     ->defaults(array(
         'controller' => 'error'
