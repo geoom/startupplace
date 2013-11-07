@@ -19,7 +19,7 @@ Route::set('admin', 'dashboard(/<controller>(/<action>))')
 
 Route::set('news', 'news(/<slug>)')
 	->defaults(array(
-		'controller' => 'news', 
+		'controller' => 'news',
 		'action'     => 'index',
 	));
 

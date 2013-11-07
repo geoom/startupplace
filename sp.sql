@@ -105,3 +105,12 @@ CREATE TABLE IF NOT EXISTS `comments` (
 /*migrations*/
 
 ALTER TABLE articles add column `slug` varchar(200) DEFAULT NULL AFTER  `title`;
+
+CREATE TABLE IF NOT EXISTS `files` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `file` text NOT NULL,
+  `type` varchar(4) NOT NULL,
+  `size` bigint(20) unsigned NOT NULL,
+  `description` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

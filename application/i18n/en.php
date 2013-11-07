@@ -18,4 +18,3 @@ return array(
     'EVENT02' => 'Pasi&oacute;n por emprender, tecnolog&iacute;a por descubrir',
     'EVENT03' => 'Startup week university',
 );
-);
