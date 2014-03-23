@@ -1,9 +1,12 @@
-StartupPlace
-==================
+# StartupPlace web site
 
-The startupplace official site
+The StartupPlace web site: blog, events, workshop and more about tech entreprenurship.
 
-To install:
+##Disclaimer:
+
+This project is an old startupplace website, this project is no longer supported, it migrates to Ruby on Rails and you can find it [here](https://github.com/StartupPlace/new.startupplace)
+
+##To install:
 --------------------------------------------------------------------------------
 
 	1) application/bootstrap.php (depending on your structure): 'base_url' => '/base/site',
